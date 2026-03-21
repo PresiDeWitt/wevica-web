@@ -62,6 +62,30 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Stock Sync Pro",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "WordPress",
+  url: "https://stocksyncpro.com",
+  description:
+    "Plugin WordPress que sincroniza automáticamente el stock y precios de WooCommerce con tus proveedores. Prueba 7 días gratis.",
+  offers: {
+    "@type": "Offer",
+    price: "79",
+    priceCurrency: "EUR",
+    priceValidUntil: "2027-12-31",
+    availability: "https://schema.org/InStock",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "47",
+  },
+  author: { "@type": "Organization", name: "Wévica", url: "https://stocksyncpro.com" },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -70,6 +94,10 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -88,6 +116,16 @@ export default function RootLayout({
           defer
           strategy="afterInteractive"
         />
+        {/* Crisp chat — soporte en tiempo real */}
+        <Script id="crisp-chat" strategy="afterInteractive">
+          {`
+            window.$crisp=[];
+            window.CRISP_WEBSITE_ID="CRISP_WEBSITE_ID_PENDIENTE";
+            (function(){var d=document;var s=d.createElement("script");
+            s.src="https://client.crisp.chat/l.js";
+            s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+          `}
+        </Script>
       </body>
     </html>
   );

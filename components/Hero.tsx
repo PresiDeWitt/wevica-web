@@ -73,7 +73,7 @@ export default function Hero() {
 
         {/* Trust signal */}
         <p className="section-fade-in text-xs text-[#475569] mt-1">
-          Sin tarjeta de crédito · Cancela cuando quieras · Instalación en 2 minutos
+          Sin tarjeta de crédito · 7 días gratis · Reembolso garantizado · Instalación en 2 minutos
         </p>
 
         {/* Hero visual — fiel al plugin real */}
