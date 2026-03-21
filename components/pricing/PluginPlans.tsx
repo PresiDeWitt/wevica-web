@@ -12,7 +12,8 @@ interface Plan {
   description: string;
   features: string[];
   ctaLabel: string;
-  ctaHref: string;
+  ctaHrefAnnual: string;
+  ctaHrefMonthly: string;
 }
 
 const pluginPlans: Plan[] = [
@@ -33,7 +34,8 @@ const pluginPlans: Plan[] = [
       "7 días de prueba gratis",
     ],
     ctaLabel: "Empezar con Personal",
-    ctaHref: "https://wevica.lemonsqueezy.com/buy/PLACEHOLDER",
+    ctaHrefAnnual: "https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5",
+    ctaHrefMonthly: "https://wevica.lemonsqueezy.com/buy/fcfed910-961a-4f4e-96b8-e403e7c630a5",
   },
   {
     name: "Business",
@@ -53,7 +55,8 @@ const pluginPlans: Plan[] = [
       "7 días de prueba gratis",
     ],
     ctaLabel: "Empezar con Business",
-    ctaHref: "https://wevica.lemonsqueezy.com/buy/PLACEHOLDER",
+    ctaHrefAnnual: "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Business%20Anual",
+    ctaHrefMonthly: "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Business%20Mensual",
   },
   {
     name: "Agency",
@@ -73,7 +76,8 @@ const pluginPlans: Plan[] = [
       "7 días de prueba gratis",
     ],
     ctaLabel: "Empezar con Agency",
-    ctaHref: "https://wevica.lemonsqueezy.com/buy/PLACEHOLDER",
+    ctaHrefAnnual: "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Agency%20Anual",
+    ctaHrefMonthly: "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Agency%20Mensual",
   },
 ];
 
@@ -202,7 +206,7 @@ export default function PluginPlans() {
 
               {/* CTA */}
               <Link
-                href={plan.ctaHref}
+                href={billingAnnual ? plan.ctaHrefAnnual : plan.ctaHrefMonthly}
                 className={`lemonsqueezy-button text-center py-3 px-5 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   plan.popular
                     ? "btn-primary glow-primary"
@@ -210,7 +214,6 @@ export default function PluginPlans() {
                 }`}
                 aria-label={`${plan.ctaLabel} - €${billingAnnual ? plan.annualPrice : plan.monthlyPrice}/${billingAnnual ? "año" : "mes"}`}
               >
-                {/* TODO: reemplazar con URL real de Lemon Squeezy */}
                 <span>{plan.ctaLabel}</span>
               </Link>
             </article>

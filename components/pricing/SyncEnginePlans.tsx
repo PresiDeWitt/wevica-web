@@ -26,7 +26,7 @@ const syncPlans: SyncPlan[] = [
       "Soporte por email",
     ],
     ctaLabel: "Activar Starter",
-    ctaHref: "https://wevica.lemonsqueezy.com/buy/PLACEHOLDER",
+    ctaHref: "mailto:hola@wevica.com?subject=Sync%20Engine%20Starter",
   },
   {
     name: "Pro",
@@ -44,7 +44,7 @@ const syncPlans: SyncPlan[] = [
       "Soporte prioritario",
     ],
     ctaLabel: "Activar Pro",
-    ctaHref: "https://wevica.lemonsqueezy.com/buy/PLACEHOLDER",
+    ctaHref: "mailto:hola@wevica.com?subject=Sync%20Engine%20Pro",
   },
   {
     name: "Business",
@@ -62,7 +62,7 @@ const syncPlans: SyncPlan[] = [
       "Soporte 24/7 dedicado",
     ],
     ctaLabel: "Activar Business",
-    ctaHref: "https://wevica.lemonsqueezy.com/buy/PLACEHOLDER",
+    ctaHref: "mailto:hola@wevica.com?subject=Sync%20Engine%20Business",
   },
 ];
 
@@ -209,7 +209,6 @@ export default function SyncEnginePlans() {
                 }`}
                 aria-label={`${plan.ctaLabel} - €${plan.price}/mes`}
               >
-                {/* TODO: reemplazar con URL real de Lemon Squeezy */}
                 <span>{plan.ctaLabel}</span>
               </Link>
             </article>

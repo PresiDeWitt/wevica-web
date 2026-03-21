@@ -18,7 +18,7 @@ const plans = [
       "7 días de prueba gratis",
     ],
     ctaLabel: "Empezar con el plugin →",
-    ctaHref: "https://wevica.lemonsqueezy.com/buy/PLACEHOLDER",
+    ctaHref: "https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5",
     highlighted: false,
   },
   {
@@ -35,7 +35,7 @@ const plans = [
       "Configuración guiada",
     ],
     ctaLabel: "Activar Sync Engine →",
-    ctaHref: "https://wevica.lemonsqueezy.com/buy/PLACEHOLDER",
+    ctaHref: "mailto:hola@wevica.com?subject=Activar%20Sync%20Engine",
     highlighted: true,
   },
 ];
@@ -156,7 +156,6 @@ export default function PricingTeaser() {
                 }`}
                 aria-label={`${plan.ctaLabel} - desde €${plan.price}/${plan.period}`}
               >
-                {/* TODO: reemplazar con URL real de Lemon Squeezy */}
                 <span>{plan.ctaLabel}</span>
               </Link>
             </article>
