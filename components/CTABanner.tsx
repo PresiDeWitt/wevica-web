@@ -76,11 +76,10 @@ export default function CTABanner() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 section-fade-in">
               <Link
-                href="https://wevica.lemonsqueezy.com/buy/PLACEHOLDER"
+                href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"
                 className="lemonsqueezy-button inline-flex items-center gap-2 bg-white text-[#4f46e5] font-bold px-8 py-4 rounded-xl text-base hover:bg-indigo-50 transition-all duration-200 shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:shadow-[0_0_40px_rgba(255,255,255,0.35)] hover:-translate-y-0.5"
                 aria-label="Instalar el plugin gratis - 7 días sin tarjeta"
               >
-                {/* TODO: reemplazar con URL real de Lemon Squeezy */}
                 Instalar el plugin gratis
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

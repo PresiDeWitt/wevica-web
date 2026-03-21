@@ -54,11 +54,10 @@ export default function Hero() {
         {/* CTA buttons */}
         <div className="section-fade-in flex flex-col sm:flex-row items-center gap-3 mt-2">
           <Link
-            href="https://wevica.lemonsqueezy.com/buy/PLACEHOLDER"
+            href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"
             className="btn-primary lemonsqueezy-button px-6 py-3 text-base inline-flex items-center gap-2 glow-primary"
             aria-label="Instalar el plugin Stock Sync Pro"
           >
-            {/* TODO: reemplazar con URL real de Lemon Squeezy */}
             <span>Instalar el plugin</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

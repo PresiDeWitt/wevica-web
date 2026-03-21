@@ -77,11 +77,10 @@ export default function Navbar() {
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-3">
           <Link
-            href="https://wevica.lemonsqueezy.com/buy/PLACEHOLDER"
+            href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"
             className="btn-primary lemonsqueezy-button px-4 py-2 text-sm inline-flex items-center gap-1.5"
             aria-label="Empezar gratis - 7 días sin tarjeta de crédito"
           >
-            {/* TODO: reemplazar con URL real de Lemon Squeezy */}
             <span>Empezar gratis</span>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -133,11 +132,10 @@ export default function Navbar() {
             Cómo funciona
           </Link>
           <Link
-            href="https://wevica.lemonsqueezy.com/buy/PLACEHOLDER"
+            href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"
             className="btn-primary lemonsqueezy-button px-4 py-2.5 text-sm text-center"
             onClick={() => setMobileOpen(false)}
           >
-            {/* TODO: reemplazar con URL real de Lemon Squeezy */}
             <span>Empezar gratis</span>
           </Link>
         </div>
