@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Integrations from "@/components/Integrations";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
+import Testimonials from "@/components/Testimonials";
 import PricingTeaser from "@/components/PricingTeaser";
 import LandingFAQ from "@/components/LandingFAQ";
 import CTABanner from "@/components/CTABanner";
@@ -41,6 +42,7 @@ export default function HomePage() {
       <TrustBar />
       <Features />
       <HowItWorks />
+      <Testimonials />
       <PricingTeaser />
       <LandingFAQ />
       <CTABanner />
