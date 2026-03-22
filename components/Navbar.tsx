@@ -72,6 +72,18 @@ export default function Navbar() {
           >
             Cómo funciona
           </Link>
+          <Link
+            href="/docs"
+            className="text-sm font-medium text-[#64748b] hover:text-[#f1f5f9] transition-colors duration-200"
+          >
+            Docs
+          </Link>
+          <Link
+            href="/blog"
+            className="text-sm font-medium text-[#64748b] hover:text-[#f1f5f9] transition-colors duration-200"
+          >
+            Blog
+          </Link>
         </div>
 
         {/* CTA Button */}
@@ -130,6 +142,20 @@ export default function Navbar() {
             onClick={() => setMobileOpen(false)}
           >
             Cómo funciona
+          </Link>
+          <Link
+            href="/docs"
+            className="text-sm font-medium text-[#64748b] hover:text-[#f1f5f9] py-2 transition-colors"
+            onClick={() => setMobileOpen(false)}
+          >
+            Docs
+          </Link>
+          <Link
+            href="/blog"
+            className="text-sm font-medium text-[#64748b] hover:text-[#f1f5f9] py-2 transition-colors"
+            onClick={() => setMobileOpen(false)}
+          >
+            Blog
           </Link>
           <Link
             href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"

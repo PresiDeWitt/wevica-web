@@ -207,11 +207,11 @@ export default function PluginPlans() {
               {/* CTA */}
               <Link
                 href={billingAnnual ? plan.ctaHrefAnnual : plan.ctaHrefMonthly}
-                className={`lemonsqueezy-button text-center py-3 px-5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                className={`text-center py-3 px-5 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   plan.popular
                     ? "btn-primary glow-primary"
                     : "btn-secondary"
-                }`}
+                } ${(billingAnnual ? plan.ctaHrefAnnual : plan.ctaHrefMonthly).startsWith("https://wevica.lemonsqueezy.com") ? "lemonsqueezy-button" : ""}`}
                 aria-label={`${plan.ctaLabel} - €${billingAnnual ? plan.annualPrice : plan.monthlyPrice}/${billingAnnual ? "año" : "mes"}`}
               >
                 <span>{plan.ctaLabel}</span>

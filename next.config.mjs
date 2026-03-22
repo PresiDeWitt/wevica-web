@@ -13,11 +13,12 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://app.lemonsqueezy.com https://client.crisp.chat",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://app.lemonsqueezy.com https://client.crisp.chat https://www.googletagmanager.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: https:",
-      "connect-src 'self' https://app.lemonsqueezy.com https://*.crisp.chat wss://*.crisp.chat",
+      "connect-src 'self' https://app.lemonsqueezy.com https://*.lemonsqueezy.com https://*.crisp.chat wss://*.crisp.chat https://www.google-analytics.com https://analytics.google.com",
+      "frame-src https://*.lemonsqueezy.com https://client.crisp.chat",
       "frame-ancestors 'none'",
     ].join("; "),
   },
@@ -25,6 +26,7 @@ const securityHeaders = [
 
 const nextConfig = {
   reactStrictMode: true,
+  outputFileTracingRoot: "/Users/alex/vscode/plugin-web",
   headers: async () => [
     {
       source: "/:path*",

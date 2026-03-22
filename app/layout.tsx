@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import CookieBanner from "@/components/CookieBanner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://stocksyncpro.com"),
+  metadataBase: new URL("https://stocksync.es"),
   title: {
     default: "Stock Sync Pro — Sincronización de stock para WooCommerce",
     template: "%s | Stock Sync Pro",
@@ -18,13 +19,13 @@ export const metadata: Metadata = {
     "woocommerce api proveedor",
     "scraping woocommerce",
   ],
-  authors: [{ name: "Stock Sync Pro", url: "https://stocksyncpro.com" }],
+  authors: [{ name: "Stock Sync Pro", url: "https://stocksync.es" }],
   creator: "Stock Sync Pro",
   publisher: "Stock Sync Pro",
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://stocksyncpro.com",
+    url: "https://stocksync.es",
     siteName: "Stock Sync Pro",
     title: "Stock Sync Pro — Sincronización de stock para WooCommerce",
     description:
@@ -68,7 +69,7 @@ const jsonLd = {
   name: "Stock Sync Pro",
   applicationCategory: "BusinessApplication",
   operatingSystem: "WordPress",
-  url: "https://stocksyncpro.com",
+  url: "https://stocksync.es",
   description:
     "Plugin WordPress que sincroniza automáticamente el stock y precios de WooCommerce con tus proveedores. Prueba 7 días gratis.",
   offers: {
@@ -83,7 +84,7 @@ const jsonLd = {
     ratingValue: "4.9",
     reviewCount: "47",
   },
-  author: { "@type": "Organization", name: "Wévica", url: "https://stocksyncpro.com" },
+  author: { "@type": "Organization", name: "Wévica", url: "https://stocksync.es" },
 };
 
 export default function RootLayout({
@@ -111,6 +112,7 @@ export default function RootLayout({
       </head>
       <body className="bg-bg text-text-primary antialiased">
         {children}
+        <CookieBanner />
         <Script
           src="https://app.lemonsqueezy.com/js/lemon.js"
           defer

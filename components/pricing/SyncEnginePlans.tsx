@@ -202,7 +202,7 @@ export default function SyncEnginePlans() {
               {/* CTA */}
               <Link
                 href={plan.ctaHref}
-                className={`lemonsqueezy-button text-center py-3 px-5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                className={`text-center py-3 px-5 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   plan.popular
                     ? "btn-primary glow-primary"
                     : "btn-secondary"

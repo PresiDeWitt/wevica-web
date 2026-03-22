@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Integrations from "@/components/Integrations";
 import Features from "@/components/Features";
+import ComparisonSection from "@/components/ComparisonSection";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import PricingTeaser from "@/components/PricingTeaser";
 import LandingFAQ from "@/components/LandingFAQ";
 import CTABanner from "@/components/CTABanner";
+import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
 
 function TrustBar() {
@@ -41,11 +43,13 @@ export default function HomePage() {
       <Integrations />
       <TrustBar />
       <Features />
+      <ComparisonSection />
       <HowItWorks />
       <Testimonials />
       <PricingTeaser />
       <LandingFAQ />
       <CTABanner />
+      <NewsletterSection />
       <Footer />
     </main>
   );

@@ -55,6 +55,9 @@ export default function Footer() {
                   { label: "Características", href: "/#caracteristicas" },
                   { label: "Precios", href: "/pricing" },
                   { label: "Cómo funciona", href: "/#como-funciona" },
+                  { label: "Documentación", href: "/docs" },
+                  { label: "Blog", href: "/blog" },
+                  { label: "Changelog", href: "/changelog" },
                   { label: "FAQ", href: "/#faq" },
                 ].map((link) => (
                   <li key={link.label}>
@@ -97,7 +100,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-[#334155]">
-            © 2025 Stock Sync Pro · Todos los derechos reservados
+            © 2026 Stock Sync Pro · Todos los derechos reservados
           </p>
           <p className="text-xs text-[#334155]">
             Hecho con cariño en España 🇪🇸

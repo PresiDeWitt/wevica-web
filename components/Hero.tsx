@@ -1,25 +1,8 @@
-"use client";
-
-import { useEffect, useRef } from "react";
 import Link from "next/link";
 
 export default function Hero() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-    const timer = setTimeout(() => {
-      el.querySelectorAll(".section-fade-in").forEach((node, i) => {
-        setTimeout(() => node.classList.add("visible"), i * 120);
-      });
-    }, 100);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section
-      ref={sectionRef}
       className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 pt-24 pb-20 overflow-hidden grid-bg"
       aria-label="Presentación principal de Stock Sync Pro"
     >
@@ -32,7 +15,7 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-6">
         {/* Badge */}
-        <div className="section-fade-in">
+        <div style={{ animation: "heroFadeInUp 0.7s ease 0.05s both" }}>
           <span className="badge" role="status">
             <span className="badge-dot" aria-hidden="true" />
             7 días gratis · Sin tarjeta de crédito
@@ -40,19 +23,19 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="section-fade-in text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05]">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05]" style={{ animation: "heroFadeInUp 0.7s ease 0.15s both" }}>
           Tu stock,
           <br />
           <span className="gradient-text">siempre al día.</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="section-fade-in text-lg sm:text-xl text-[#64748b] max-w-2xl leading-relaxed">
+        <p className="text-lg sm:text-xl text-[#64748b] max-w-2xl leading-relaxed" style={{ animation: "heroFadeInUp 0.7s ease 0.25s both" }}>
           <strong className="text-[#94a3b8] font-medium">Stock Sync Pro</strong> conecta tu tienda WooCommerce con tus proveedores y mantiene el stock y los precios actualizados de forma automática, cada hora, cada día.
         </p>
 
         {/* CTA buttons */}
-        <div className="section-fade-in flex flex-col sm:flex-row items-center gap-3 mt-2">
+        <div className="flex flex-col sm:flex-row items-center gap-3 mt-2" style={{ animation: "heroFadeInUp 0.7s ease 0.35s both" }}>
           <Link
             href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"
             className="btn-primary lemonsqueezy-button px-6 py-3 text-base inline-flex items-center gap-2 glow-primary"
@@ -72,12 +55,12 @@ export default function Hero() {
         </div>
 
         {/* Trust signal */}
-        <p className="section-fade-in text-xs text-[#475569] mt-1">
+        <p className="text-xs text-[#475569] mt-1" style={{ animation: "heroFadeInUp 0.7s ease 0.45s both" }}>
           Sin tarjeta de crédito · 7 días gratis · Reembolso garantizado · Instalación en 2 minutos
         </p>
 
         {/* Hero visual — fiel al plugin real */}
-        <div className="section-fade-in mt-10 w-full max-w-3xl">
+        <div className="mt-10 w-full max-w-3xl" style={{ animation: "heroFadeInUp 0.7s ease 0.55s both" }}>
           {/* Outer glow ring */}
           <div className="rounded-2xl p-[1px] bg-gradient-to-b from-white/10 to-white/[0.03] shadow-[0_0_80px_rgba(99,102,241,0.12)]">
             {/* Browser chrome */}

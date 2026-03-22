@@ -109,7 +109,7 @@ export default function Image() {
 
         {/* URL */}
         <div style={{ fontSize: "20px", color: "#334155" }}>
-          stocksyncpro.com
+          stocksync.es
         </div>
       </div>
     ),
