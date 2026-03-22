@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
 
-// RFC 5322 simplified — stricter than just checking for "@"
+// RFC 5322 simplified email regex
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*\.[a-zA-Z]{2,}$/;
 
 const ALLOWED_ORIGINS = [
@@ -9,7 +11,43 @@ const ALLOWED_ORIGINS = [
   process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null,
 ].filter(Boolean) as string[];
 
+// Rate limiter: max 5 requests per IP per hour
+let ratelimit: Ratelimit | null = null;
+if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+  ratelimit = new Ratelimit({
+    redis: Redis.fromEnv(),
+    limiter: Ratelimit.slidingWindow(5, "1 h"),
+    analytics: true,
+    prefix: "subscribe",
+  });
+}
+
 export async function POST(req: NextRequest) {
+  // Rate limiting
+  if (ratelimit) {
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+      req.headers.get("x-real-ip") ??
+      "anonymous";
+
+    const { success, limit, remaining, reset } = await ratelimit.limit(ip);
+
+    if (!success) {
+      return NextResponse.json(
+        { error: "Demasiadas peticiones. Inténtalo más tarde." },
+        {
+          status: 429,
+          headers: {
+            "X-RateLimit-Limit": String(limit),
+            "X-RateLimit-Remaining": String(remaining),
+            "X-RateLimit-Reset": String(reset),
+            "Retry-After": String(Math.ceil((reset - Date.now()) / 1000)),
+          },
+        }
+      );
+    }
+  }
+
   // Enforce Content-Type
   const contentType = req.headers.get("content-type") ?? "";
   if (!contentType.includes("application/json")) {
@@ -70,12 +108,10 @@ export async function POST(req: NextRequest) {
       });
 
       if (!res.ok) {
-        const errText = await res.text();
-        console.error("[subscribe] Resend API error:", res.status, errText);
+        console.error("[subscribe] Resend API error:", res.status, await res.text());
       }
     } catch (err) {
       console.error("[subscribe] Error enviando notificación:", err);
-      // Don't expose internal errors — silently continue
     }
   }
 
