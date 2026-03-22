@@ -134,7 +134,7 @@ export default async function RootLayout({
           <Script nonce={nonce} id="crisp-chat" strategy="afterInteractive">
             {`
               window.$crisp=[];
-              window.CRISP_WEBSITE_ID="${CRISP_ID}";
+              window.CRISP_WEBSITE_ID=${JSON.stringify(CRISP_ID)};
               (function(){var d=document;var s=d.createElement("script");
               s.src="https://client.crisp.chat/l.js";
               s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();

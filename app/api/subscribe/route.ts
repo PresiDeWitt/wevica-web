@@ -8,8 +8,11 @@ const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-
 const ALLOWED_ORIGINS = [
   "https://stocksync.es",
   "https://www.stocksync.es",
-  process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null,
-].filter(Boolean) as string[];
+  // Only allow Vercel preview URLs with validated format
+  ...(process.env.VERCEL_URL && /^[\w-]+\.vercel\.app$/.test(process.env.VERCEL_URL)
+    ? [`https://${process.env.VERCEL_URL}`]
+    : []),
+];
 
 // Rate limiter: max 5 requests per IP per hour
 let ratelimit: Ratelimit | null = null;
@@ -54,12 +57,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Content-Type inválido" }, { status: 415 });
   }
 
-  // CSRF: validate Origin in production
-  if (process.env.NODE_ENV === "production") {
-    const origin = req.headers.get("origin");
-    if (origin && !ALLOWED_ORIGINS.includes(origin)) {
-      return NextResponse.json({ error: "No autorizado" }, { status: 403 });
-    }
+  // CSRF: validate Origin header always
+  const origin = req.headers.get("origin");
+  if (origin && !ALLOWED_ORIGINS.includes(origin)) {
+    return NextResponse.json({ error: "No autorizado" }, { status: 403 });
   }
 
   // Parse body safely

@@ -47,7 +47,7 @@ export default function CookieBanner({ nonce }: Props) {
             strategy="afterInteractive"
           />
           <Script nonce={nonce} id="ga4-init" strategy="afterInteractive">
-            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',${JSON.stringify(GA_ID)});`}
           </Script>
         </>
       )}
