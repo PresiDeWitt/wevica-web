@@ -85,32 +85,13 @@ body {
     color: #ffffff;
     font-weight: 600;
     border-radius: 8px;
-    transition: all 0.2s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .btn-primary::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
-
-  .btn-primary:hover::before {
-    opacity: 1;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, filter 0.2s ease;
   }
 
   .btn-primary:hover {
+    filter: brightness(0.88);
     box-shadow: 0 0 25px rgba(99, 102, 241, 0.5);
     transform: translateY(-1px);
-  }
-
-  .btn-primary span {
-    position: relative;
-    z-index: 1;
   }
 
   .btn-secondary {
