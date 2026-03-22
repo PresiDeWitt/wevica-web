@@ -80,7 +80,7 @@ export default function Footer() {
                 {[
                   { label: "Privacidad", href: "/privacidad" },
                   { label: "Términos de uso", href: "/terminos" },
-                  { label: "Contacto", href: "mailto:hola@wevica.com" },
+                  { label: "Contacto", href: "/contacto" },
                   { label: "Soporte", href: "mailto:hola@wevica.com" },
                 ].map((link) => (
                   <li key={link.label}>

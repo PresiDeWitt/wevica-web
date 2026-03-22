@@ -10,6 +10,30 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "woocommerce-api-rest-proveedor",
+    title: "WooCommerce y API REST de proveedor: cómo conectarlos sin programar",
+    excerpt: "Si tu proveedor tiene una API REST, tienes la forma más potente de sincronizar stock y precios. Sin archivos, sin descargas manuales, sin retrasos.",
+    date: "2026-03-22",
+    readTime: "5 min",
+    tag: "Tutorial",
+  },
+  {
+    slug: "alertas-stock-woocommerce-telegram",
+    title: "Alertas de stock en WooCommerce por Telegram: configuración completa",
+    excerpt: "Saber en tiempo real cuándo cambia el stock de tu tienda sin tener que entrar al panel. Con Stock Sync Pro puedes recibir alertas en Telegram en segundos.",
+    date: "2026-03-22",
+    readTime: "4 min",
+    tag: "Tutorial",
+  },
+  {
+    slug: "importar-productos-proveedor-woocommerce",
+    title: "Cómo importar productos de tu proveedor a WooCommerce automáticamente",
+    excerpt: "Importar el catálogo de un proveedor a WooCommerce manualmente puede llevar horas. Y hay que repetirlo cada vez que el proveedor actualiza precios o stock.",
+    date: "2026-03-22",
+    readTime: "5 min",
+    tag: "Tutorial",
+  },
+  {
     slug: "woocommerce-sin-stock-como-evitar-ventas",
     title: "Ventas de productos sin stock en WooCommerce: cómo evitarlo definitivamente",
     excerpt: "Un cliente compra, tú aceptas el pago y luego no tienes el artículo. Es el error más costoso en ecommerce — y el más evitable con la configuración correcta.",

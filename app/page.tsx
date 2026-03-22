@@ -37,7 +37,7 @@ function TrustBar() {
 
 export default function HomePage() {
   return (
-    <main>
+    <main id="main-content">
       <Navbar />
       <Hero />
       <Integrations />

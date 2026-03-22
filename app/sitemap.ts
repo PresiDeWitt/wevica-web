@@ -39,7 +39,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${base}/blog/alertas-stock-woocommerce-telegram`,
+      lastModified: new Date("2026-03-22"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${base}/blog/importar-productos-proveedor-woocommerce`,
+      lastModified: new Date("2026-03-22"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${base}/blog/woocommerce-api-rest-proveedor`,
+      lastModified: new Date("2026-03-22"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     { url: `${base}/changelog`, lastModified: now, changeFrequency: "weekly", priority: 0.5 },
+    { url: `${base}/contacto`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
     { url: `${base}/privacidad`, lastModified: now, changeFrequency: "monthly", priority: 0.3 },
     { url: `${base}/terminos`, lastModified: now, changeFrequency: "monthly", priority: 0.3 },
   ];

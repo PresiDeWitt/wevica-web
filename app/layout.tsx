@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import Script from "next/script";
+import { Inter } from "next/font/google";
 import CookieBanner from "@/components/CookieBanner";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://stocksync.es"),
@@ -100,25 +107,21 @@ export default async function RootLayout({
   const nonce = headersList.get("x-nonce") ?? "";
 
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className={`scroll-smooth ${inter.variable}`}>
       <head>
         <script
           nonce={nonce}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body className="bg-bg text-text-primary antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:btn-primary focus:px-4 focus:py-2 focus:text-sm focus:rounded-lg"
+        >
+          Saltar al contenido
+        </a>
         {children}
         <CookieBanner nonce={nonce} />
         <Script
