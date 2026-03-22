@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import Script from "next/script";
 import CookieBanner from "@/components/CookieBanner";
 import "./globals.css";
@@ -87,15 +88,22 @@ const jsonLd = {
   author: { "@type": "Organization", name: "Wévica", url: "https://stocksync.es" },
 };
 
-export default function RootLayout({
+const CRISP_ID = process.env.CRISP_WEBSITE_ID;
+const crispReady = CRISP_ID && CRISP_ID !== "CRISP_WEBSITE_ID_PENDIENTE";
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const headersList = await headers();
+  const nonce = headersList.get("x-nonce") ?? "";
+
   return (
     <html lang="es" className="scroll-smooth">
       <head>
         <script
+          nonce={nonce}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
@@ -112,22 +120,24 @@ export default function RootLayout({
       </head>
       <body className="bg-bg text-text-primary antialiased">
         {children}
-        <CookieBanner />
+        <CookieBanner nonce={nonce} />
         <Script
+          nonce={nonce}
           src="https://app.lemonsqueezy.com/js/lemon.js"
           defer
           strategy="afterInteractive"
         />
-        {/* Crisp chat — soporte en tiempo real */}
-        <Script id="crisp-chat" strategy="afterInteractive">
-          {`
-            window.$crisp=[];
-            window.CRISP_WEBSITE_ID="CRISP_WEBSITE_ID_PENDIENTE";
-            (function(){var d=document;var s=d.createElement("script");
-            s.src="https://client.crisp.chat/l.js";
-            s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
-          `}
-        </Script>
+        {crispReady && (
+          <Script nonce={nonce} id="crisp-chat" strategy="afterInteractive">
+            {`
+              window.$crisp=[];
+              window.CRISP_WEBSITE_ID="${CRISP_ID}";
+              (function(){var d=document;var s=d.createElement("script");
+              s.src="https://client.crisp.chat/l.js";
+              s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+            `}
+          </Script>
+        )}
       </body>
     </html>
   );
