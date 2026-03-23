@@ -275,8 +275,8 @@ REF-003,8,12.00`}
                 <div className="glass-card rounded-xl p-6 mt-8 text-center">
                   <p className="text-[#94a3b8] text-sm mb-3">¿No encuentras lo que buscas?</p>
                   <a
-                    href="mailto:hola@wevica.com "
-                    className="btn-primary px-6 py-2.5 text-sm font-bold text-[#f1f5f9] mb-2 "
+                    href="mailto:hola@wevica.com"
+                    className="btn-primary px-6 py-2.5 text-sm inline-flex items-center gap-2"
                   >
                     <span>Contactar soporte</span>
                   </a>
