@@ -161,10 +161,15 @@ export default function Testimonials() {
 
                 {/* Attribution */}
                 <div className="flex items-center justify-between flex-wrap gap-4">
+                  {/* gap-3 = espacio entre imagen y texto. Sube a gap-4, gap-5, gap-6... */}
                   <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] flex items-center justify-center text-white font-bold text-base shrink-0">
-                      X3
-                    </div>
+
+                    {/* ml-0 = sin margen izquierdo. Sube a ml-1, ml-2, ml-3... para alejar del borde */}
+                    {/* p-1 = padding interno (hace la imagen más pequeña visualmente dentro del círculo) */}
+                    <img src="https://www.google.com/s2/favicons?domain=x3padelzone.com&sz=64"
+                      alt="Logo de X3 Pádel Zone"
+                      className="w-10 h-10 rounded-full object-cover bg-white border border-white/[0.08] ml-1 p-1"
+                    />
                     <div>
                       <p className="text-sm font-semibold text-[#f1f5f9]">Equipo X3 Pádel Zone</p>
                       <p className="text-xs text-[#475569]">x3padelzone.com · WooCommerce</p>

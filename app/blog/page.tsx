@@ -82,14 +82,14 @@ export default function BlogPage() {
       <div className="min-h-screen pt-20 pb-24 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
           <div className="pt-12 mb-12">
-            <div className="badge mb-4 inline-flex">
+            <div className="badge mb-4 inline-flex" style={{ animation: "heroFadeInUp 0.7s ease 0.05s both" }}>
               <span className="badge-dot" aria-hidden="true" />
               Blog
             </div>
-            <h1 className="text-4xl font-black tracking-tight mb-3">
+            <h1 className="text-4xl font-black tracking-tight mb-3" style={{ animation: "heroFadeInUp 0.7s ease 0.15s both" }}>
               Recursos para <span className="gradient-text">tiendas WooCommerce</span>
             </h1>
-            <p className="text-[#64748b] text-lg">
+            <p className="text-[#64748b] text-lg" style={{ animation: "heroFadeInUp 0.7s ease 0.25s both" }}>
               Guías, tutoriales y casos prácticos para automatizar tu inventario y vender más.
             </p>
           </div>

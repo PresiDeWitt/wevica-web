@@ -2,23 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DocsSidebar from "./DocsSidebar";
 
 export const metadata: Metadata = {
   title: "Documentación",
   description: "Guía de instalación, configuración y referencia de API de Stock Sync Pro para WooCommerce.",
 };
-
-const sections = [
-  { id: "introduccion", label: "Introducción" },
-  { id: "requisitos", label: "Requisitos" },
-  { id: "instalacion", label: "Instalación" },
-  { id: "configuracion", label: "Configuración" },
-  { id: "fuentes-de-datos", label: "Fuentes de datos" },
-  { id: "api", label: "API REST" },
-  { id: "sync-engine", label: "Sync Engine" },
-  { id: "alertas", label: "Alertas Telegram" },
-  { id: "faq-tecnico", label: "FAQ técnico" },
-];
 
 export default function DocsPage() {
   return (
@@ -29,46 +18,21 @@ export default function DocsPage() {
 
           {/* Header */}
           <div className="mb-12 pt-8">
-            <div className="badge mb-4 inline-flex">
+            <div className="badge mb-4 inline-flex" style={{ animation: "heroFadeInUp 0.7s ease 0.05s both" }}>
               <span className="badge-dot" aria-hidden="true" />
               Documentación
             </div>
-            <h1 className="text-4xl font-black tracking-tight mb-3">
+            <h1 className="text-4xl font-black tracking-tight mb-3" style={{ animation: "heroFadeInUp 0.7s ease 0.15s both" }}>
               <span className="gradient-text">Stock Sync Pro</span> — Docs
             </h1>
-            <p className="text-[#64748b] text-lg">
+            <p className="text-[#64748b] text-lg" style={{ animation: "heroFadeInUp 0.7s ease 0.25s both" }}>
               Todo lo que necesitas para instalar, configurar e integrar el plugin en tu tienda WooCommerce.
             </p>
           </div>
 
           <div className="flex gap-10">
             {/* Sidebar */}
-            <nav className="hidden lg:block w-52 shrink-0" aria-label="Tabla de contenidos">
-              <div className="sticky top-24">
-                <p className="text-[10px] font-bold text-[#475569] uppercase tracking-widest mb-3">En esta página</p>
-                <ul className="flex flex-col gap-1">
-                  {sections.map((s) => (
-                    <li key={s.id}>
-                      <a
-                        href={`#${s.id}`}
-                        className="text-sm text-[#64748b] hover:text-[#f1f5f9] transition-colors py-1 block"
-                      >
-                        {s.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-8 glass-card rounded-xl p-4">
-                  <p className="text-xs text-[#64748b] mb-3">¿Necesitas ayuda?</p>
-                  <a
-                    href="mailto:hola@wevica.com"
-                    className="text-xs text-[#6366f1] hover:text-[#8b5cf6] transition-colors font-medium"
-                  >
-                    hola@wevica.com →
-                  </a>
-                </div>
-              </div>
-            </nav>
+            <DocsSidebar />
 
             {/* Main content */}
             <main className="flex-1 min-w-0 prose-wevica">
@@ -311,8 +275,8 @@ REF-003,8,12.00`}
                 <div className="glass-card rounded-xl p-6 mt-8 text-center">
                   <p className="text-[#94a3b8] text-sm mb-3">¿No encuentras lo que buscas?</p>
                   <a
-                    href="mailto:hola@wevica.com"
-                    className="btn-primary px-6 py-2.5 text-sm inline-flex items-center gap-2"
+                    href="mailto:hola@wevica.com "
+                    className="btn-primary px-6 py-2.5 text-sm font-bold text-[#f1f5f9] mb-2 "
                   >
                     <span>Contactar soporte</span>
                   </a>

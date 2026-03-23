@@ -33,18 +33,19 @@ export default function PricingPage() {
           aria-hidden="true"
         />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <div className="badge mb-5 inline-flex">
+          <div className="badge mb-5 inline-flex" style={{ animation: "heroFadeInUp 0.7s ease 0.05s both" }}>
             <span className="badge-dot" aria-hidden="true" />
             Precios transparentes
           </div>
           <h1
             id="pricing-page-heading"
             className="text-5xl sm:text-6xl font-black tracking-tight mb-5"
+            style={{ animation: "heroFadeInUp 0.7s ease 0.15s both" }}
           >
             Simple, directo,{" "}
             <span className="gradient-text">sin sorpresas.</span>
           </h1>
-          <p className="text-[#64748b] text-lg max-w-xl mx-auto">
+          <p className="text-[#64748b] text-lg max-w-xl mx-auto" style={{ animation: "heroFadeInUp 0.7s ease 0.25s both" }}>
             Elige el plan que encaja con el tamaño de tu tienda. Todos incluyen 7 días de prueba gratis y soporte en español.
           </p>
 
