@@ -7,10 +7,11 @@ function generateNonce(): string {
 
 export function middleware(request: NextRequest) {
   const nonce = generateNonce();
+  const isProduction = process.env.NODE_ENV === "production";
 
-  const csp = [
+  const cspDirectives = [
     "default-src 'self'",
-    `script-src 'self' 'nonce-${nonce}'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""} https://app.lemonsqueezy.com https://client.crisp.chat https://www.googletagmanager.com`,
+    `script-src 'self' 'nonce-${nonce}'${!isProduction ? " 'unsafe-eval'" : ""} https://app.lemonsqueezy.com https://client.crisp.chat https://www.googletagmanager.com`,
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com",
     "img-src 'self' data: https:",
@@ -19,13 +20,24 @@ export function middleware(request: NextRequest) {
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",
-    "upgrade-insecure-requests",
-  ].join("; ");
+  ];
+
+  if (isProduction) {
+    cspDirectives.push("upgrade-insecure-requests");
+  }
+
+  const csp = cspDirectives.join("; ");
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-nonce", nonce);
 
   const response = NextResponse.next({ request: { headers: requestHeaders } });
+
+  // In local development (especially via LAN IP), strict security headers can
+  // break HMR, third-party embeds, or mixed-origin script behavior.
+  if (!isProduction) {
+    return response;
+  }
 
   response.headers.set("Content-Security-Policy", csp);
   response.headers.set("X-Content-Type-Options", "nosniff");
