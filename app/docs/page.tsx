@@ -112,7 +112,7 @@ export default function DocsPage() {
                   Tras activar el plugin, accede a <strong className="text-[#f1f5f9]">WooCommerce → Stock Sync Pro</strong> en el menú lateral de WordPress.
                 </p>
                 <ul>
-                  <li><strong>Frecuencia de sync:</strong> Selecciona con qué frecuencia se ejecuta la sincronización automática (cada 30min, 1h, 2h, o diaria).</li>
+                  <li><strong>Frecuencia de sync:</strong> Selecciona con qué frecuencia se ejecuta la sincronización automática (cada 1h, 2h, 4h, o diaria).</li>
                   <li><strong>Modo de actualización:</strong> Elige si actualizar solo el stock, solo los precios, o ambos.</li>
                   <li><strong>Productos nuevos:</strong> Decide si crear automáticamente productos nuevos que aparezcan en la fuente pero no existan en WooCommerce, o solo actualizar los existentes.</li>
                   <li><strong>Campo de referencia:</strong> Define qué campo de la fuente de datos se usa para identificar el producto en WooCommerce (SKU recomendado).</li>

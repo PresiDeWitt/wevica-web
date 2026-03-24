@@ -22,7 +22,7 @@ const steps = [
     title: "El stock se actualiza solo",
     description:
       "Una vez configurado, Stock Sync Pro trabaja en segundo plano. Cada ciclo de sincronización actualiza stock y precios en tu WooCommerce sin intervención manual.",
-    detail: "Frecuencia configurable: 30 min, 1h, 2h, diaria",
+    detail: "Frecuencia configurable: 1h, 2h, 4h, diaria",
   },
 ];
 

@@ -154,7 +154,7 @@ export default function Features() {
         {/* Additional stats row */}
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 section-fade-in">
           {[
-            { value: "+1.200", label: "Tiendas activas" },
+            { value: "+20", label: "Tiendas activas" },
             { value: "99.9%", label: "Uptime garantizado" },
             { value: "<2 min", label: "Tiempo instalación" },
             { value: "24/7", label: "Sincronización" },
