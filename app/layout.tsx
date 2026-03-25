@@ -107,7 +107,7 @@ export default async function RootLayout({
   const nonce = headersList.get("x-nonce") ?? "";
 
   return (
-    <html lang="es" className={`scroll-smooth ${inter.variable}`}>
+    <html lang="es" className={`scroll-smooth ${inter.variable}`} suppressHydrationWarning>
       <head>
         <script
           nonce={nonce}
