@@ -87,11 +87,6 @@ const jsonLd = {
     priceValidUntil: "2027-12-31",
     availability: "https://schema.org/InStock",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "47",
-  },
   author: { "@type": "Organization", name: "Wévica", url: "https://stocksync.es" },
 };
 
