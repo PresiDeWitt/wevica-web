@@ -1,5 +1,13 @@
 import Link from "next/link";
 
+// ──────────────────────────────────────────────────────────────────────────────
+// Lemon Squeezy checkout URLs para los planes del Sync Engine.
+// TODO: Reemplaza los IDs con los de tus productos en https://app.lemonsqueezy.com/products
+// ──────────────────────────────────────────────────────────────────────────────
+const LS_SE_STARTER  = "https://wevica.lemonsqueezy.com/buy/TODO_SE_STARTER_MONTHLY";
+const LS_SE_PRO      = "https://wevica.lemonsqueezy.com/buy/TODO_SE_PRO_MONTHLY";
+const LS_SE_BUSINESS = "https://wevica.lemonsqueezy.com/buy/TODO_SE_BUSINESS_MONTHLY";
+
 interface SyncPlan {
   name: string;
   price: number;
@@ -26,25 +34,25 @@ const syncPlans: SyncPlan[] = [
       "Soporte por email",
     ],
     ctaLabel: "Activar Starter",
-    ctaHref: "mailto:hola@wevica.com?subject=Sync%20Engine%20Starter",
+    ctaHref: LS_SE_STARTER,
   },
   {
     name: "Pro",
     price: 149,
     popular: true,
     description: "Para tiendas con múltiples proveedores que necesitan datos frescos cada hora.",
-    highlight: "El más elegido por tiendas medianas",
+    highlight: "El más elegido",
     features: [
       "3 proveedores gestionados",
       "Sincronización cada hora",
-      "Scraping gestionado en VPS",
-      "Notificaciones por Telegram/email",
+      "Scrapers personalizados incluidos",
+      "Notificaciones Telegram + email",
       "Dashboard + alertas avanzadas",
       "Historial 90 días",
       "Soporte prioritario",
     ],
     ctaLabel: "Activar Pro",
-    ctaHref: "mailto:hola@wevica.com?subject=Sync%20Engine%20Pro",
+    ctaHref: LS_SE_PRO,
   },
   {
     name: "Business",
@@ -58,11 +66,11 @@ const syncPlans: SyncPlan[] = [
       "Setup e integración incluidos",
       "Notificaciones multicanal",
       "Historial 365 días",
-      "SLA 99.9% garantizado",
+      "SLA 99,9% garantizado",
       "Soporte 24/7 dedicado",
     ],
     ctaLabel: "Activar Business",
-    ctaHref: "mailto:hola@wevica.com?subject=Sync%20Engine%20Business",
+    ctaHref: LS_SE_BUSINESS,
   },
 ];
 
@@ -202,7 +210,7 @@ export default function SyncEnginePlans() {
               {/* CTA */}
               <Link
                 href={plan.ctaHref}
-                className={`text-center py-3 px-5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                className={`lemonsqueezy-button text-center py-3 px-5 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   plan.popular
                     ? "btn-primary glow-primary"
                     : "btn-secondary"
