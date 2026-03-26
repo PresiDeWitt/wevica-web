@@ -1,12 +1,8 @@
 import Link from "next/link";
 
-// ──────────────────────────────────────────────────────────────────────────────
-// Lemon Squeezy checkout URLs para los planes del Sync Engine.
-// TODO: Reemplaza los IDs con los de tus productos en https://app.lemonsqueezy.com/products
-// ──────────────────────────────────────────────────────────────────────────────
-const LS_SE_STARTER  = "https://wevica.lemonsqueezy.com/buy/TODO_SE_STARTER_MONTHLY";
-const LS_SE_PRO      = "https://wevica.lemonsqueezy.com/buy/TODO_SE_PRO_MONTHLY";
-const LS_SE_BUSINESS = "https://wevica.lemonsqueezy.com/buy/TODO_SE_BUSINESS_MONTHLY";
+const LS_SE_STARTER  = process.env.NEXT_PUBLIC_LS_SE_STARTER  ?? "https://wevica.lemonsqueezy.com/checkout";
+const LS_SE_PRO      = process.env.NEXT_PUBLIC_LS_SE_PRO      ?? "https://wevica.lemonsqueezy.com/checkout";
+const LS_SE_BUSINESS = process.env.NEXT_PUBLIC_LS_SE_BUSINESS ?? "https://wevica.lemonsqueezy.com/checkout";
 
 interface SyncPlan {
   name: string;
