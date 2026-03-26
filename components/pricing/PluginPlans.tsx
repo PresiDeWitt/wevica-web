@@ -55,8 +55,8 @@ const pluginPlans: Plan[] = [
       "7 días de prueba gratis",
     ],
     ctaLabel: "Empezar con Business",
-    ctaHrefAnnual: "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Business%20Anual",
-    ctaHrefMonthly: "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Business%20Mensual",
+    ctaHrefAnnual: process.env.NEXT_PUBLIC_LS_PLUGIN_BUSINESS_ANNUAL ?? "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Business%20Anual",
+    ctaHrefMonthly: process.env.NEXT_PUBLIC_LS_PLUGIN_BUSINESS_MONTHLY ?? "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Business%20Mensual",
   },
   {
     name: "Agency",
@@ -76,8 +76,8 @@ const pluginPlans: Plan[] = [
       "7 días de prueba gratis",
     ],
     ctaLabel: "Empezar con Agency",
-    ctaHrefAnnual: "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Agency%20Anual",
-    ctaHrefMonthly: "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Agency%20Mensual",
+    ctaHrefAnnual: process.env.NEXT_PUBLIC_LS_PLUGIN_AGENCY_ANNUAL ?? "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Agency%20Anual",
+    ctaHrefMonthly: process.env.NEXT_PUBLIC_LS_PLUGIN_AGENCY_MONTHLY ?? "mailto:hola@wevica.com?subject=Stock%20Sync%20Pro%20Agency%20Mensual",
   },
 ];
 
