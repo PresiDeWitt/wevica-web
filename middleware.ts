@@ -15,7 +15,7 @@ export function middleware(request: NextRequest) {
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com",
     "img-src 'self' data: https:",
-    "connect-src 'self' https://app.lemonsqueezy.com https://*.lemonsqueezy.com https://*.crisp.chat wss://*.crisp.chat https://www.google-analytics.com https://analytics.google.com",
+    "connect-src 'self' https://app.lemonsqueezy.com https://*.lemonsqueezy.com https://*.crisp.chat wss://*.crisp.chat https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://region1.analytics.google.com",
     "frame-src https://*.lemonsqueezy.com https://client.crisp.chat",
     "frame-ancestors 'none'",
     "base-uri 'self'",
