@@ -39,9 +39,9 @@ const pluginPlans: Plan[] = [
   },
   {
     name: "Business",
-    monthlyPrice: 15,
-    annualPrice: 149,
-    annualTotal: 149,
+    monthlyPrice: 29,
+    annualPrice: 199,
+    annualTotal: 199,
     popular: true,
     description: "Para agencias y tiendas que gestionan varios sitios a la vez.",
     features: [
@@ -60,9 +60,9 @@ const pluginPlans: Plan[] = [
   },
   {
     name: "Agency",
-    monthlyPrice: 29,
-    annualPrice: 299,
-    annualTotal: 299,
+    monthlyPrice: 79,
+    annualPrice: 490,
+    annualTotal: 490,
     popular: false,
     description: "Sin límites para agencias y grandes operaciones de ecommerce.",
     features: [
@@ -126,7 +126,7 @@ export default function PluginPlans() {
             </div>
             {billingAnnual && (
               <span className="text-xs font-semibold text-green-400 bg-green-400/10 border border-green-400/20 rounded-full px-2.5 py-1">
-                Ahorra hasta 30%
+                Ahorra hasta 48%
               </span>
             )}
           </div>

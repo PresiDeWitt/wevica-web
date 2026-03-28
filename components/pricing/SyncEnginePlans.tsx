@@ -39,7 +39,7 @@ const syncPlans: SyncPlan[] = [
     description: "Para tiendas con múltiples proveedores que necesitan datos frescos cada hora.",
     highlight: "El más elegido",
     features: [
-      "3 proveedores gestionados",
+      "Hasta 4 proveedores gestionados",
       "Sincronización cada hora",
       "Scrapers personalizados incluidos",
       "Notificaciones Telegram + email",
