@@ -2,18 +2,17 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
-import PluginPlans from "@/components/pricing/PluginPlans";
-import SyncEnginePlans from "@/components/pricing/SyncEnginePlans";
+import Plans from "@/components/pricing/SyncEnginePlans";
 import PricingFAQ from "@/components/pricing/PricingFAQ";
 
 export const metadata: Metadata = {
   title: "Precios",
   description:
-    "Consulta los planes de Stock Sync Pro (plugin WordPress desde €79/año) y Sync Engine (scraping gestionado desde €79/mes). 7 días gratis, sin tarjeta.",
+    "Sync Engine + plugin WordPress en un solo plan. Desde gratis hasta €299/mes. Tu stock siempre actualizado aunque tu proveedor no tenga API. 7 días gratis, sin tarjeta.",
   openGraph: {
     title: "Precios — Stock Sync Pro",
     description:
-      "Plugin WordPress desde €79/año y scraping gestionado desde €79/mes. Prueba 7 días gratis.",
+      "Sync Engine + plugin incluidos desde €79/mes. Tu stock siempre actualizado, aunque tu proveedor no tenga API.",
   },
 };
 
@@ -68,8 +67,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <PluginPlans />
-      <SyncEnginePlans />
+      <Plans />
       <PricingFAQ />
       <CTABanner />
       <Footer />
