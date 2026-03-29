@@ -31,13 +31,13 @@ export default function Hero() {
 
         {/* Subheadline */}
         <p className="text-lg sm:text-xl text-[#64748b] max-w-2xl leading-relaxed" style={{ animation: "heroFadeInUp 0.7s ease 0.25s both" }}>
-          <strong className="text-[#94a3b8] font-medium">Stock Sync Pro</strong> conecta tu tienda WooCommerce con tus proveedores y mantiene el stock y los precios actualizados de forma automática, cada hora, cada día.
+          <strong className="text-[#94a3b8] font-medium">Stock Sync Pro</strong> conecta tu tienda WooCommerce con tus proveedores y mantiene el stock y los precios actualizados de forma automática, sin parar.
         </p>
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-3 mt-2" style={{ animation: "heroFadeInUp 0.7s ease 0.35s both" }}>
           <Link
-            href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"
+            href={process.env.NEXT_PUBLIC_LS_SE_STARTER ?? "https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"}
             className="btn-primary lemonsqueezy-button px-6 py-3 text-base inline-flex items-center gap-2 glow-primary"
             aria-label="Instalar el plugin Stock Sync Pro"
           >
@@ -103,7 +103,7 @@ export default function Hero() {
                     { label: "SYNCS", value: "1.284", meta: "Total accumulated", accent: "bg-[#6366f1]", icon: "text-[#6366f1]", iconBg: "bg-[#eef2ff]" },
                     { label: "UPDATED", value: "847",  meta: "Products total",    accent: "bg-[#10b981]", icon: "text-[#10b981]", iconBg: "bg-[#d1fae5]" },
                     { label: "ERRORS",  value: "0",    meta: "No errors",         accent: "bg-[#10b981]", icon: "text-[#10b981]", iconBg: "bg-[#d1fae5]" },
-                    { label: "STORES",  value: "2",    meta: "casapicota, padel", accent: "bg-[#f59e0b]", icon: "text-[#f59e0b]", iconBg: "bg-[#fef3c7]" },
+                    { label: "STORES",  value: "2",    meta: "Tienda A, Tienda B", accent: "bg-[#f59e0b]", icon: "text-[#f59e0b]", iconBg: "bg-[#fef3c7]" },
                   ].map((card) => (
                     <div key={card.label} className="relative bg-white rounded-xl border border-[#e5e7eb] p-3 shadow-sm overflow-hidden">
                       {/* Accent bar izquierda */}
@@ -134,8 +134,8 @@ export default function Hero() {
                     </div>
                     <div className="grid grid-cols-2 divide-x divide-[#f3f4f6]">
                       {[
-                        { label: "DATE",    value: "15/03/2025 06:00" },
-                        { label: "STORE",   value: "casapicota" },
+                        { label: "DATE",    value: "29/03/2026 06:00" },
+                        { label: "STORE",   value: "Tienda A" },
                         { label: "UPDATED", value: <span className="text-[#065f46]">423 / 450</span> },
                         { label: "ERRORS",  value: <span className="text-[#065f46]">0</span> },
                       ].map((item, i) => (
@@ -165,7 +165,7 @@ export default function Hero() {
                       </div>
                       <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#f3f4f6] border border-[#e5e7eb] rounded-full">
                         <svg className="w-3 h-3 text-[#6b7280]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"/></svg>
-                        <span className="font-mono text-[9px] text-[#6b7280]">tutienda.com/wp-json/wevica/v1/sync</span>
+                        <span className="font-mono text-[9px] text-[#6b7280]">tutienda.com/wp-json/stocksync/v1/sync</span>
                       </div>
                     </div>
                   </div>

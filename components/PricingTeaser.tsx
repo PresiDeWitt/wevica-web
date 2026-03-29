@@ -35,7 +35,7 @@ const plans = [
       "7 días de prueba gratis",
     ],
     ctaLabel: "Activar Starter →",
-    ctaHref: "https://wevica.lemonsqueezy.com/checkout",
+    ctaHref: process.env.NEXT_PUBLIC_LS_SE_STARTER ?? "https://wevica.lemonsqueezy.com/checkout",
     highlighted: true,
   },
 ];

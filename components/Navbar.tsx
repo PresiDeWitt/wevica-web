@@ -84,12 +84,18 @@ export default function Navbar() {
           >
             Blog
           </Link>
+          <Link
+            href="/sync-engine"
+            className="text-sm font-medium text-[#64748b] hover:text-[#f1f5f9] transition-colors duration-200"
+          >
+            Sync Engine
+          </Link>
         </div>
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-3">
           <Link
-            href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"
+            href={process.env.NEXT_PUBLIC_LS_SE_STARTER ?? "https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"}
             className="btn-primary lemonsqueezy-button px-4 py-2 text-sm inline-flex items-center gap-1.5"
             aria-label="Empezar gratis - 7 días sin tarjeta de crédito"
           >
@@ -158,7 +164,14 @@ export default function Navbar() {
             Blog
           </Link>
           <Link
-            href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"
+            href="/sync-engine"
+            className="text-sm font-medium text-[#64748b] hover:text-[#f1f5f9] py-2 transition-colors"
+            onClick={() => setMobileOpen(false)}
+          >
+            Sync Engine
+          </Link>
+          <Link
+            href={process.env.NEXT_PUBLIC_LS_SE_STARTER ?? "https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"}
             className="btn-primary lemonsqueezy-button px-4 py-2.5 text-sm text-center"
             onClick={() => setMobileOpen(false)}
           >

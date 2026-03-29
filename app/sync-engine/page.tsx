@@ -44,7 +44,7 @@ const plans = [
     highlight: "El más elegido",
     description: "Para tiendas que necesitan datos frescos y múltiples proveedores.",
     features: [
-      "3 proveedores gestionados",
+      "Hasta 4 proveedores gestionados",
       "Sincronización cada hora",
       "Scrapers personalizados incluidos",
       "Notificaciones Telegram + email",

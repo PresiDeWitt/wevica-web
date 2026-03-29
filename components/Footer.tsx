@@ -54,6 +54,7 @@ export default function Footer() {
                 {[
                   { label: "Características", href: "/#caracteristicas" },
                   { label: "Precios", href: "/pricing" },
+                  { label: "Sync Engine", href: "/sync-engine" },
                   { label: "Cómo funciona", href: "/#como-funciona" },
                   { label: "Documentación", href: "/docs" },
                   { label: "Blog", href: "/blog" },
