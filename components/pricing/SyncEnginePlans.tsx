@@ -100,8 +100,8 @@ export default function Plans() {
             id="plans-heading"
             className="text-3xl sm:text-4xl font-black tracking-tight mb-3"
           >
-            Tu stock siempre actualizado,{" "}
-            <span className="gradient-text">aunque tu proveedor no tenga API.</span>
+            Olvídate de actualizar el stock.{" "}
+            <span className="gradient-text">Lo hacemos nosotros.</span>
           </h2>
           <p className="text-[#64748b] text-base max-w-xl mx-auto">
             Todos los planes de pago incluyen el plugin WordPress y el Sync Engine gestionado.{" "}

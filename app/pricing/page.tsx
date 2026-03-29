@@ -8,11 +8,11 @@ import PricingFAQ from "@/components/pricing/PricingFAQ";
 export const metadata: Metadata = {
   title: "Precios",
   description:
-    "Sync Engine + plugin WordPress en un solo plan. Desde gratis hasta €299/mes. Tu stock siempre actualizado aunque tu proveedor no tenga API. 7 días gratis, sin tarjeta.",
+    "Olvídate de actualizar el stock. Sync Engine + plugin WordPress en un solo plan, desde gratis hasta €299/mes. 7 días gratis, sin tarjeta.",
   openGraph: {
     title: "Precios — Stock Sync Pro",
     description:
-      "Sync Engine + plugin incluidos desde €79/mes. Tu stock siempre actualizado, aunque tu proveedor no tenga API.",
+      "Olvídate de actualizar el stock. Lo hacemos nosotros. Sync Engine + plugin incluidos desde €79/mes.",
   },
 };
 
