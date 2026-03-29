@@ -13,11 +13,11 @@ const faqs = [
   },
   {
     q: "¿Qué diferencia hay entre el plugin y el Sync Engine?",
-    a: "El plugin es el componente que se instala en tu WordPress y gestiona la sincronización de stock y precios. El Sync Engine es un servicio adicional gestionado que extrae datos de portales de proveedores que no tienen API (mediante scraping web) y los envía al plugin. Si tu proveedor tiene API propia, solo necesitas el plugin.",
+    a: "El plugin se instala en tu WordPress y gestiona la sincronización de stock. El Sync Engine es el servicio gestionado que extrae datos de tu proveedor (aunque no tenga API) y los envía al plugin automáticamente. Todos los planes de pago incluyen ambos — no necesitas contratar nada por separado.",
   },
   {
     q: "¿Cada cuánto se actualiza el stock?",
-    a: "Con el plan Personal, la sincronización automática se ejecuta cada hora mediante cron job. En los planes Business y Agency puedes configurar la frecuencia. El Sync Engine también puede configurarse para frecuencias mayores (cada 30 min, cada 15 min) según el plan contratado.",
+    a: "Con el plan Starter, la sincronización automática se ejecuta cada 2 horas. Con Pro, cada hora. Con Business, cada 30 minutos. En todos los casos el Sync Engine gestiona el proceso automáticamente sin que tengas que hacer nada.",
   },
   {
     q: "¿Qué pasa si mi proveedor cambia el diseño de su web?",
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "¿Funciona con WooCommerce en multisitio o staging?",
-    a: "Sí. Cada instalación de WordPress requiere su propia licencia activa. El plan Business incluye 3 sitios y el Agency incluye sitios ilimitados, ideal para agencias que gestionan entornos de staging y producción.",
+    a: "Sí. Cada instalación de WordPress requiere su propia licencia activa. El plan Pro incluye hasta 4 proveedores y el Business incluye proveedores ilimitados, ideal para agencias que gestionan múltiples tiendas.",
   },
   {
     q: "¿Mis credenciales y datos están seguros?",

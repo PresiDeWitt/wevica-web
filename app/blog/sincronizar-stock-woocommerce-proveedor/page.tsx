@@ -157,7 +157,7 @@ export default function BlogPost() {
 
             <h2>Conclusión</h2>
             <p>
-              Si tienes una tienda WooCommerce y actualizas el stock manualmente, estás perdiendo tiempo, dinero y ventas. La automatización es posible independientemente del tipo de proveedor que tengas, y el retorno de inversión es inmediato: a €15/h, solo 2 horas semanales de trabajo manual suponen más de €1.500 al año — frente a los €79 anuales de Stock Sync Pro.
+              Si tienes una tienda WooCommerce y actualizas el stock manualmente, estás perdiendo tiempo, dinero y ventas. La automatización es posible independientemente del tipo de proveedor que tengas, y el retorno de inversión es inmediato: a €15/h, solo 2 horas semanales de trabajo manual suponen más de €1.500 al año — frente a los €79 al mes del plan Starter de Stock Sync Pro.
             </p>
 
             {/* CTA */}

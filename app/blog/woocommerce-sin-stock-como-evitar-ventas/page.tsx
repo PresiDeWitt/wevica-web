@@ -123,10 +123,10 @@ export default function BlogPost() {
             <div className="glass-card rounded-xl p-6 my-6">
               <ol className="flex flex-col gap-4 text-sm text-[#94a3b8] mb-0">
                 {[
-                  "Configura la sincronización automática cada hora (plan Personal) o cada 30 minutos (plan Business).",
-                  "Activa las alertas Telegram para recibir notificación inmediata cuando el sync detecta cambios de stock.",
+                  "Configura la sincronización automática cada 2 horas (plan Starter), cada hora (Pro) o cada 30 minutos (Business).",
+                  "Activa las alertas por email para recibir notificación inmediata cuando el sync detecta cambios de stock.",
                   "Establece el comportamiento para stock 0: ocultar producto si no quieres que aparezca, o marcar como agotado si prefieres mantenerlo visible.",
-                  "Activa el informe diario por Telegram: cada mañana recibirás un resumen de productos actualizados y posibles incidencias.",
+                  "Activa el informe diario por email: cada mañana recibirás un resumen de productos actualizados y posibles incidencias.",
                 ].map((step, i) => (
                   <li key={i} className="flex gap-3">
                     <span className="w-5 h-5 rounded-full bg-[rgba(99,102,241,0.2)] text-[#6366f1] text-xs flex items-center justify-center shrink-0 mt-0.5 font-bold">{i + 1}</span>

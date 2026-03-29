@@ -100,7 +100,7 @@ export default function DocsPage() {
 
                 <div className="glass-card rounded-xl p-5 my-4">
                   <p className="text-sm text-[#94a3b8] mb-0">
-                    <strong className="text-[#f1f5f9]">Importante:</strong> Cada licencia permite activación en un número de sitios según el plan (Personal: 1 sitio, Business: 3 sitios, Agency: ilimitados). Para desactivar un sitio y liberar la licencia ve a <strong className="text-[#f1f5f9]">Plugins → Stock Sync Pro → Desactivar licencia</strong>.
+                    <strong className="text-[#f1f5f9]">Importante:</strong> Cada licencia incluye el Sync Engine gestionado según el plan (Starter: 1 proveedor, Pro: hasta 4 proveedores, Business: ilimitados). Para desactivar un sitio y liberar la licencia ve a <strong className="text-[#f1f5f9]">Plugins → Stock Sync Pro → Desactivar licencia</strong>.
                   </p>
                 </div>
               </section>

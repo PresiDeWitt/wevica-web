@@ -59,7 +59,7 @@ const releases = [
     type: "major",
     changes: [
       { type: "new", text: "Integración con Sync Engine: scraping gestionado para proveedores sin API" },
-      { type: "new", text: "Soporte multisitio para planes Business y Agency" },
+      { type: "new", text: "Soporte multisitio para planes Pro y Business" },
       { type: "new", text: "Precio mínimo configurable para proteger márgenes" },
       { type: "improve", text: "Compatibilidad con WooCommerce 9.x y WordPress 6.7" },
     ],

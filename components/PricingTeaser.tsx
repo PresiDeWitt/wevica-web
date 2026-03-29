@@ -5,37 +5,37 @@ import Link from "next/link";
 
 const plans = [
   {
-    category: "Plugin WordPress",
-    name: "Stock Sync Pro",
-    price: "79",
-    period: "año",
-    description: "Instálalo en tu WordPress y sincroniza tu stock de forma autónoma.",
+    category: "Plan Free",
+    name: "Gratis para siempre",
+    price: "0",
+    period: "",
+    description: "Plugin WordPress incluido. Conecta tu propio CSV, API o ERP. Tú gestionas el sync.",
     features: [
-      "1 sitio WooCommerce",
-      "Sync automático y manual",
-      "API REST incluida",
-      "Soporte por email",
-      "7 días de prueba gratis",
+      "Plugin WordPress incluido",
+      "Hasta 500 productos/mes",
+      "1 API key",
+      "Sync manual vía REST API",
+      "Sin límite de tiempo",
     ],
-    ctaLabel: "Empezar con el plugin →",
-    ctaHref: "https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5",
+    ctaLabel: "Empezar gratis →",
+    ctaHref: "https://wordpress.org/plugins/wevica-stock-sync/",
     highlighted: false,
   },
   {
-    category: "Sync Engine",
-    name: "Sync Engine",
+    category: "Starter — desde €79/mes",
+    name: "Plugin + Sync Engine",
     price: "79",
     period: "mes",
-    description: "Nosotros gestionamos el scraping en nuestros VPS 24/7. Tú solo configuras.",
+    description: "Plugin + Sync Engine gestionado. Nosotros nos ocupamos del scraping 24/7.",
     features: [
+      "Plugin WordPress incluido",
       "1 proveedor gestionado",
       "Sync automático cada 2h",
-      "VPS dedicado incluido",
-      "Soporte por email",
-      "Configuración guiada",
+      "Scraping en VPS gestionado",
+      "7 días de prueba gratis",
     ],
-    ctaLabel: "Activar Sync Engine →",
-    ctaHref: "mailto:hola@wevica.com?subject=Activar%20Sync%20Engine",
+    ctaLabel: "Activar Starter →",
+    ctaHref: "https://wevica.lemonsqueezy.com/checkout",
     highlighted: true,
   },
 ];
@@ -79,11 +79,11 @@ export default function PricingTeaser() {
             id="pricing-teaser-heading"
             className="text-4xl sm:text-5xl font-black tracking-tight mb-4"
           >
-            Dos productos,{" "}
-            <span className="gradient-text">un objetivo.</span>
+            Olvídate de actualizar el stock.{" "}
+            <span className="gradient-text">Lo hacemos nosotros.</span>
           </h2>
           <p className="text-[#64748b] text-lg max-w-xl mx-auto">
-            Elige el nivel de automatización que necesita tu tienda.
+            Plugin + Sync Engine incluidos en cada plan. Empieza gratis, escala cuando lo necesites.
           </p>
         </div>
 

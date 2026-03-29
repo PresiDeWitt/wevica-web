@@ -9,9 +9,9 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "¿Puedo usar el plugin sin contratar el Sync Engine?",
+    question: "¿Qué incluye cada plan?",
     answer:
-      "Sí, por supuesto. El plugin Stock Sync Pro funciona de forma completamente independiente. Puedes conectarlo a tu propio servidor, a un Google Sheet, a una API de proveedor o a un archivo Excel que actualices manualmente. El Sync Engine es un servicio adicional para quienes quieren delegar el scraping automático.",
+      "Todos los planes de pago (Starter, Pro y Business) incluyen tanto el plugin WordPress como el Sync Engine gestionado. El plan Free incluye solo el plugin para quienes ya tienen su propia fuente de datos (CSV, API o ERP) y quieren gestionarse solos, sin límite de tiempo.",
   },
   {
     question: "¿Cómo funciona el período de prueba de 7 días?",
@@ -26,7 +26,7 @@ const faqs: FAQItem[] = [
   {
     question: "¿Puedo cambiar de plan o cancelar en cualquier momento?",
     answer:
-      "Sí. Los planes del plugin son anuales (o mensuales si elijes esa opción) y se renuevan automáticamente. Puedes cancelar la renovación automática en cualquier momento desde tu portal de cliente en Lemon Squeezy. Los planes del Sync Engine son mensuales y puedes cancelarlos antes del próximo ciclo de facturación sin ningún coste adicional.",
+      "Sí. Todos los planes son mensuales y se renuevan automáticamente. Puedes cancelar en cualquier momento desde tu portal de cliente en Lemon Squeezy antes del próximo ciclo de facturación, sin ningún coste adicional.",
   },
   {
     question: "¿Qué proveedores y formatos de datos soporta Stock Sync Pro?",

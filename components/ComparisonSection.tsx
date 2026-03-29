@@ -8,7 +8,7 @@ export default function ComparisonSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
   const annualCost = hours * 15 * 52;
-  const pluginCost = 79;
+  const pluginCost = 79 * 12; // €79/mes × 12 = €948/año
   const savings = annualCost - pluginCost;
   const paybackWeeks = Math.max(1, Math.round(pluginCost / (hours * 15 * 4.33)));
 
@@ -88,8 +88,8 @@ export default function ComparisonSection() {
 
             <div className="bg-[rgba(99,102,241,0.06)] border border-[rgba(99,102,241,0.2)] rounded-2xl p-5 text-center">
               <p className="text-[10px] font-bold text-[#6366f1] uppercase tracking-widest mb-2">Stock Sync Pro / año</p>
-              <p className="text-3xl font-black text-[#6366f1]">€79</p>
-              <p className="text-xs text-[#64748b] mt-1">Todo incluido · sin sorpresas</p>
+              <p className="text-3xl font-black text-[#6366f1]">€948</p>
+              <p className="text-xs text-[#64748b] mt-1">€79/mes · todo incluido</p>
             </div>
 
             <div className="bg-green-500/[0.06] border border-green-500/20 rounded-2xl p-5 text-center">
@@ -141,7 +141,7 @@ export default function ComparisonSection() {
                 "Sin devoluciones por artículos agotados",
                 "Catálogo siempre al día → más ventas",
                 "Escala a miles de productos sin esfuerzo",
-                "Alertas por Telegram si algo falla",
+                "Alertas por email si algo falla",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 text-sm text-[#94a3b8]">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0 mt-0.5" aria-hidden="true">
