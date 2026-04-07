@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
+import SyncEnginePlans from "@/components/pricing/SyncEnginePlans";
 
 export const metadata: Metadata = {
   title: "Sync Engine — Scraping gestionado para WooCommerce",
@@ -14,66 +15,6 @@ export const metadata: Metadata = {
       "Sincronizamos tu stock desde cualquier proveedor 24/7. Tú solo instalas el plugin y nos dices cuál es tu proveedor.",
   },
 };
-
-const LS_SE_STARTER  = process.env.NEXT_PUBLIC_LS_SE_STARTER  ?? "https://wevica.lemonsqueezy.com/checkout";
-const LS_SE_PRO      = process.env.NEXT_PUBLIC_LS_SE_PRO      ?? "https://wevica.lemonsqueezy.com/checkout";
-const LS_SE_BUSINESS = process.env.NEXT_PUBLIC_LS_SE_BUSINESS ?? "https://wevica.lemonsqueezy.com/checkout";
-
-const plans = [
-  {
-    name: "Starter",
-    price: 79,
-    popular: false,
-    description: "Perfecto para tiendas con un único proveedor.",
-    features: [
-      "1 proveedor gestionado",
-      "Sincronización cada 2 horas",
-      "Scraper personalizado incluido",
-      "Dashboard de monitorización",
-      "Alertas por email",
-      "Historial 30 días",
-      "Soporte por email",
-    ],
-    ctaLabel: "Activar Starter",
-    ctaHref: LS_SE_STARTER,
-  },
-  {
-    name: "Pro",
-    price: 149,
-    popular: true,
-    highlight: "El más elegido",
-    description: "Para tiendas que necesitan datos frescos y múltiples proveedores.",
-    features: [
-      "Hasta 4 proveedores gestionados",
-      "Sincronización cada hora",
-      "Scrapers personalizados incluidos",
-      "Notificaciones Telegram + email",
-      "Dashboard con alertas avanzadas",
-      "Historial 90 días",
-      "Soporte prioritario",
-    ],
-    ctaLabel: "Activar Pro",
-    ctaHref: LS_SE_PRO,
-  },
-  {
-    name: "Business",
-    price: 299,
-    popular: false,
-    description: "Operaciones grandes con múltiples proveedores y SLA garantizado.",
-    features: [
-      "Proveedores ilimitados",
-      "Sincronización cada 30 minutos",
-      "VPS dedicado exclusivo",
-      "Setup e integración completa",
-      "Notificaciones multicanal",
-      "Historial 365 días",
-      "SLA 99,9% garantizado",
-      "Soporte 24/7 dedicado",
-    ],
-    ctaLabel: "Activar Business",
-    ctaHref: LS_SE_BUSINESS,
-  },
-];
 
 const steps = [
   {
@@ -244,96 +185,9 @@ export default function SyncEnginePage() {
       </section>
 
       {/* ── Plans ────────────────────────────────────────────────────────── */}
-      <section id="planes" className="py-20 px-4 sm:px-6" aria-labelledby="se-plans-heading">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="badge mb-4 inline-flex">
-              <span className="badge-dot" aria-hidden="true" />
-              Planes mensuales
-            </div>
-            <h2
-              id="se-plans-heading"
-              className="text-3xl sm:text-4xl font-black tracking-tight mb-3"
-            >
-              <span className="gradient-text">Elige tu plan</span>
-            </h2>
-            <p className="text-[#64748b] text-base max-w-lg mx-auto">
-              Todos los planes incluyen scraper personalizado para tu proveedor, 7 días de prueba y soporte en español.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {plans.map((plan) => (
-              <article
-                key={plan.name}
-                className={`rounded-2xl p-7 flex flex-col gap-6 transition-all duration-300 relative ${
-                  plan.popular ? "plan-card-popular" : "glass-card glass-card-hover"
-                }`}
-                aria-label={`Plan Sync Engine ${plan.name}`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                    <span className="popular-badge">{plan.highlight}</span>
-                  </div>
-                )}
-
-                <div>
-                  <h3 className="text-lg font-bold text-[#f1f5f9] mb-1">{plan.name}</h3>
-                  <p className="text-sm text-[#64748b]">{plan.description}</p>
-                </div>
-
-                <div>
-                  <div className="flex items-end gap-1.5 mb-1">
-                    <span className="text-4xl font-black text-[#f1f5f9]">€{plan.price}</span>
-                    <span className="text-[#64748b] mb-1.5 text-sm">/mes</span>
-                  </div>
-                  <p className="text-xs text-[#475569]">Facturado mensualmente · Cancela cuando quieras</p>
-                </div>
-
-                <ul className="flex flex-col gap-2.5 flex-1" aria-label={`Características del plan ${plan.name}`}>
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2.5 text-sm text-[#94a3b8]">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="shrink-0 mt-0.5">
-                        <circle cx="8" cy="8" r="7" fill="rgba(139,92,246,0.15)" />
-                        <path d="M5 8l2 2 4-4" stroke="#8b5cf6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href={plan.ctaHref}
-                  className={`lemonsqueezy-button text-center py-3 px-5 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                    plan.popular ? "btn-primary glow-primary" : "btn-secondary"
-                  }`}
-                  aria-label={`${plan.ctaLabel} - €${plan.price}/mes`}
-                >
-                  {plan.ctaLabel}
-                </a>
-              </article>
-            ))}
-          </div>
-
-          {/* Custom scraper note */}
-          <div className="mt-10 glass-card rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <p className="text-sm font-semibold text-[#f1f5f9] mb-1">
-                ¿Tu proveedor tiene una estructura especial?
-              </p>
-              <p className="text-xs text-[#64748b]">
-                Desarrollamos scrapers a medida para cualquier web, API o formato. Contáctanos para presupuesto.
-              </p>
-            </div>
-            <a
-              href="mailto:hola@wevica.com?subject=Scraper%20personalizado%20Sync%20Engine"
-              className="btn-secondary px-5 py-2.5 text-sm font-medium whitespace-nowrap shrink-0"
-            >
-              Solicitar scraper personalizado →
-            </a>
-          </div>
-        </div>
-      </section>
+      <div id="planes">
+        <SyncEnginePlans />
+      </div>
 
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
       <SyncEngineFAQ />
