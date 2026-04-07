@@ -109,7 +109,7 @@ export async function POST(req: NextRequest) {
       });
 
       if (!res.ok) {
-        console.error("[subscribe] Resend API error:", res.status, await res.text());
+        console.error("[subscribe] Resend API error:", res.status);
       }
     } catch (err) {
       console.error("[subscribe] Error enviando notificación:", err);
