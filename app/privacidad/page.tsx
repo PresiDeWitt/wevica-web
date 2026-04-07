@@ -1,21 +1,7 @@
-/** @jsxRuntime classic */
-import * as React from "react";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-
-type Metadata = {
-  title: string;
-  description?: string;
-};
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      [elemName: string]: any;
-    }
-  }
-}
 
 export const metadata: Metadata = {
   title: "Política de Privacidad",

@@ -9,6 +9,83 @@ export const metadata: Metadata = {
 
 const releases = [
   {
+    version: "4.9.2",
+    date: "7 abril 2026",
+    type: "patch",
+    changes: [
+      { type: "new", text: "Updater robusto con ZipArchive y botón 'Actualizar ahora' en el dashboard" },
+      { type: "new", text: "Respuestas de activate/validate incluyen plan, plan_name y limits" },
+      { type: "new", text: "Detalles del plan activo visibles en la página de licencia (nombre, límite de API keys, features)" },
+      { type: "fix", text: "Corrección de límites de plan y añadido plan free en SaaS" },
+    ],
+  },
+  {
+    version: "4.9.1",
+    date: "6 abril 2026",
+    type: "patch",
+    changes: [
+      { type: "fix", text: "Script Python movido a .github/scripts para evitar error de parseo en YAML heredoc" },
+      { type: "fix", text: "Stub de get_option corregido con expect()->with()->andReturn()" },
+      { type: "fix", text: "withArgs() reemplazado por with() en LicenseTest (Brain\\Monkey API)" },
+    ],
+  },
+  {
+    version: "4.9.0",
+    date: "5 abril 2026",
+    type: "major",
+    changes: [
+      { type: "new", text: "Activación unificada de plugin + Sync Engine bajo una única licencia" },
+      { type: "new", text: "Formulario de onboarding para configuración del scraper enviado por email tras activación" },
+      { type: "improve", text: "Estructura de planes simplificada — Sync Engine incluido en todos los planes de pago" },
+      { type: "improve", text: "Limpieza de la página de settings — eliminadas secciones redundantes" },
+      { type: "fix", text: "Error 500 en la API de licencias al activar" },
+      { type: "fix", text: "Auditoría del codebase — resueltas lógicas redundantes y condiciones rotas" },
+      { type: "fix", text: "Añadidas cabeceras de seguridad a todas las respuestas REST" },
+    ],
+  },
+  {
+    version: "4.8.2",
+    date: "3 abril 2026",
+    type: "patch",
+    changes: [
+      { type: "fix", text: "Extracción de URL de Google Sheets desde enlaces compartidos de Drive" },
+      { type: "fix", text: "manage_stock ahora se deshabilita correctamente cuando no se envía cantidad" },
+      { type: "fix", text: "Modo Dry Run muestra etiqueta 'Preview' en lugar de 'Sin SKU' en el log" },
+      { type: "fix", text: "Hashing bcrypt para API keys (reemplaza almacenamiento HMAC-SHA256)" },
+      { type: "fix", text: "Rate limiting en endpoints de licencia y Sync Engine (capa Vercel)" },
+      { type: "improve", text: "Limpieza de transients al desactivar el plugin" },
+    ],
+  },
+  {
+    version: "4.7.0",
+    date: "1 abril 2026",
+    type: "minor",
+    changes: [
+      { type: "new", text: "Registry API — el plugin se registra automáticamente en el backend central de Vercel al activar Sync Engine" },
+      { type: "new", text: "Gestión del ciclo de vida de Sync Engine (activar/desactivar desde el panel)" },
+      { type: "new", text: "UI de settings simplificada — URL de fuente de datos, test de conexión y auto-detección de formato" },
+      { type: "new", text: "Endpoint /stocksync/v1/config para que Sync Engine obtenga la configuración del plugin" },
+      { type: "new", text: "Página de estado simplificada con estado en tiempo real de Sync Engine y última sync" },
+      { type: "new", text: "Página de ayuda rehecha para usuarios no técnicos (inicio rápido en 4 pasos, FAQ, guía de formatos)" },
+      { type: "improve", text: "uninstall.php limpia todas las opciones de registry y cron al eliminar el plugin" },
+      { type: "improve", text: "170+ tests PHPUnit en 14 clases (Pure PHP, WP Stubs, WC Mocks)" },
+      { type: "fix", text: "Prevención de SSRF en URLs de fuente, autenticación HMAC-SHA256 en registry" },
+    ],
+  },
+  {
+    version: "4.4.0",
+    date: "28 marzo 2026",
+    type: "minor",
+    changes: [
+      { type: "new", text: "Middleware de validación de plan — control de acceso a funcionalidades por tier de suscripción" },
+      { type: "new", text: "Tracking de uso (productos, llamadas API) con límites mensuales" },
+      { type: "new", text: "Estadísticas en el dashboard — uso en tiempo real vs límites con alertas por porcentaje" },
+      { type: "new", text: "Webhook handler de Lemon Squeezy (subscription_created, updated, cancelled, expired)" },
+      { type: "new", text: "Notificaciones por email en el ciclo de vida de la suscripción" },
+      { type: "new", text: "Página de configuración de facturación para Lemon Squeezy" },
+    ],
+  },
+  {
     version: "4.0.1",
     date: "21 marzo 2026",
     type: "patch",

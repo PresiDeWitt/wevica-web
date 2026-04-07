@@ -284,7 +284,7 @@ export default function Testimonials() {
               </div>
             </div>
             <a
-              href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"
+              href="/pricing"
               className="lemonsqueezy-button btn-secondary px-5 py-2.5 text-sm font-medium whitespace-nowrap shrink-0"
             >
               Empezar prueba gratis →

@@ -49,7 +49,7 @@ export default function DocsPage() {
                 <div className="glass-card rounded-xl p-5 my-6 border-l-4 border-[#6366f1]">
                   <p className="text-sm text-[#94a3b8] mb-0">
                     <strong className="text-[#f1f5f9]">Trial gratuito de 7 días.</strong> Prueba el plugin completo sin tarjeta de crédito. Si no te convence, no pagas nada.{" "}
-                    <Link href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5" className="text-[#6366f1]">
+                    <Link href="/pricing" className="text-[#6366f1]">
                       Instalar ahora →
                     </Link>
                   </p>
@@ -82,7 +82,7 @@ export default function DocsPage() {
 
                 <h3 className="text-base font-bold text-[#f1f5f9] mt-6 mb-3">1. Descarga el plugin</h3>
                 <p>
-                  Tras completar la compra en LemonSqueezy recibirás un email con el enlace de descarga del archivo <code className="text-[#a5b4fc] bg-white/5 px-1.5 py-0.5 rounded text-sm">wevica-stock-sync-pro.zip</code>. También puedes descargarlo desde tu panel de cliente en LemonSqueezy en cualquier momento.
+                  Tras completar la compra en LemonSqueezy recibirás un email con el enlace de descarga del archivo <code className="text-[#a5b4fc] bg-white/5 px-1.5 py-0.5 rounded text-sm">stock-sync-pro.zip</code>. También puedes descargarlo desde tu panel de cliente en LemonSqueezy en cualquier momento.
                 </p>
 
                 <h3 className="text-base font-bold text-[#f1f5f9] mt-6 mb-3">2. Instala en WordPress</h3>

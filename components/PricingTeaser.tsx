@@ -18,7 +18,7 @@ const plans = [
       "Sin límite de tiempo",
     ],
     ctaLabel: "Empezar gratis →",
-    ctaHref: "https://wordpress.org/plugins/wevica-stock-sync/",
+    ctaHref: "/descargar",
     highlighted: false,
   },
   {
@@ -35,7 +35,7 @@ const plans = [
       "7 días de prueba gratis",
     ],
     ctaLabel: "Activar Starter →",
-    ctaHref: process.env.NEXT_PUBLIC_LS_SE_STARTER ?? "https://wevica.lemonsqueezy.com/checkout",
+    ctaHref: process.env.NEXT_PUBLIC_LS_SE_STARTER ?? "https://stocksyncpro.lemonsqueezy.com/checkout",
     highlighted: true,
   },
 ];

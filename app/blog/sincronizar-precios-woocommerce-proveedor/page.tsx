@@ -136,7 +136,7 @@ export default function BlogPost() {
               <p className="text-[#f1f5f9] font-bold text-lg mb-2">Automatiza stock y precios a la vez</p>
               <p className="text-[#64748b] text-sm mb-6">7 días gratis. Sin tarjeta de crédito.</p>
               <Link
-                href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"
+                href="/pricing"
                 className="lemonsqueezy-button btn-primary px-7 py-3 text-sm inline-flex items-center gap-2 glow-primary"
               >
                 <span>Instalar Stock Sync Pro</span>

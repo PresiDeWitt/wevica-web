@@ -95,7 +95,7 @@ export default function Navbar() {
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-3">
           <Link
-            href={process.env.NEXT_PUBLIC_LS_SE_STARTER ?? "https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"}
+            href="/descargar"
             className="btn-primary lemonsqueezy-button px-4 py-2 text-sm inline-flex items-center gap-1.5"
             aria-label="Empezar gratis - 7 días sin tarjeta de crédito"
           >
@@ -171,7 +171,7 @@ export default function Navbar() {
             Sync Engine
           </Link>
           <Link
-            href={process.env.NEXT_PUBLIC_LS_SE_STARTER ?? "https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"}
+            href="/descargar"
             className="btn-primary lemonsqueezy-button px-4 py-2.5 text-sm text-center"
             onClick={() => setMobileOpen(false)}
           >

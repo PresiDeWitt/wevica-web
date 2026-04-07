@@ -37,8 +37,8 @@ export default function Hero() {
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-3 mt-2" style={{ animation: "heroFadeInUp 0.7s ease 0.35s both" }}>
           <Link
-            href={process.env.NEXT_PUBLIC_LS_SE_STARTER ?? "https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"}
-            className="btn-primary lemonsqueezy-button px-6 py-3 text-base inline-flex items-center gap-2 glow-primary"
+            href="/descargar"
+            className="btn-primary px-6 py-3 text-base inline-flex items-center gap-2 glow-primary"
             aria-label="Instalar el plugin Stock Sync Pro"
           >
             <span>Instalar el plugin</span>

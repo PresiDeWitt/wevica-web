@@ -106,7 +106,7 @@ export default function BlogPost() {
             <div className="glass-card rounded-2xl p-8 mt-10 text-center">
               <p className="text-[#f1f5f9] font-bold text-lg mb-2">Automatiza la importación de tu catálogo</p>
               <p className="text-[#64748b] text-sm mb-6">Compatible con cualquier formato de proveedor. 7 días gratis.</p>
-              <Link href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5" className="lemonsqueezy-button btn-primary px-7 py-3 text-sm inline-flex items-center gap-2 glow-primary">
+              <Link href="/pricing" className="lemonsqueezy-button btn-primary px-7 py-3 text-sm inline-flex items-center gap-2 glow-primary">
                 <span>Instalar Stock Sync Pro</span>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </Link>

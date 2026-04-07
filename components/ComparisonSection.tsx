@@ -158,8 +158,8 @@ export default function ComparisonSection() {
         {/* CTA */}
         <div className="text-center mt-10 section-fade-in">
           <Link
-            href="https://wevica.lemonsqueezy.com/buy/16216ef2-9646-4aca-9c04-8ea7fb001cd5"
-            className="lemonsqueezy-button btn-primary px-8 py-4 text-base inline-flex items-center gap-2 glow-primary"
+            href="/descargar"
+            className="btn-primary px-8 py-4 text-base inline-flex items-center gap-2 glow-primary"
           >
             <span>Empezar a ahorrar — 7 días gratis</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">

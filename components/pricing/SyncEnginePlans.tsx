@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-const LS_STARTER  = process.env.NEXT_PUBLIC_LS_SE_STARTER  ?? "https://wevica.lemonsqueezy.com/checkout";
-const LS_PRO      = process.env.NEXT_PUBLIC_LS_SE_PRO      ?? "https://wevica.lemonsqueezy.com/checkout";
-const LS_BUSINESS = process.env.NEXT_PUBLIC_LS_SE_BUSINESS ?? "https://wevica.lemonsqueezy.com/checkout";
+const LS_STARTER  = process.env.NEXT_PUBLIC_LS_SE_STARTER  ?? "https://stocksyncpro.lemonsqueezy.com/checkout";
+const LS_PRO      = process.env.NEXT_PUBLIC_LS_SE_PRO      ?? "https://stocksyncpro.lemonsqueezy.com/checkout";
+const LS_BUSINESS = process.env.NEXT_PUBLIC_LS_SE_BUSINESS ?? "https://stocksyncpro.lemonsqueezy.com/checkout";
 
 interface Plan {
   name: string;
@@ -30,7 +30,7 @@ const plans: Plan[] = [
       "7 días de prueba completa",
     ],
     ctaLabel: "Empezar gratis",
-    ctaHref: "https://wordpress.org/plugins/wevica-stock-sync/",
+    ctaHref: "/descargar",
   },
   {
     name: "Starter",
