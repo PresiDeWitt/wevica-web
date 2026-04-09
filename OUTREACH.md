@@ -1,3 +1,5 @@
+> ⚠️ **OBSOLETO** — Este documento contenía estrategias de lanzamiento inicial. Ya no refleja el estado actual del proyecto (testimonios reales conseguidos, Crisp configurado, etc.). Archivar o eliminar cuando ya no sea necesario.
+
 # Outreach para primera venta — Stock Sync Pro
 
 ## 🎯 Canales prioritarios (orden de impacto)

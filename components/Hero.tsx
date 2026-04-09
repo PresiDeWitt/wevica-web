@@ -88,7 +88,7 @@ export default function Hero() {
                       <div className="text-[11px] text-[#6b7280] mt-0.5">Stock synchronization dashboard</div>
                     </div>
                     <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#eef2ff] text-[#4338ca] border border-[#c7d2fe]">
-                      v4.0.1
+                      v4.9.2
                     </span>
                   </div>
                   <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-[11px] text-[#374151] font-medium shadow-sm">
@@ -134,7 +134,7 @@ export default function Hero() {
                     </div>
                     <div className="grid grid-cols-2 divide-x divide-[#f3f4f6]">
                       {[
-                        { label: "DATE",    value: "29/03/2026 06:00" },
+                        { label: "DATE",    value: "Hace 5 min" },
                         { label: "STORE",   value: "Tienda A" },
                         { label: "UPDATED", value: <span className="text-[#065f46]">423 / 450</span> },
                         { label: "ERRORS",  value: <span className="text-[#065f46]">0</span> },
@@ -165,7 +165,7 @@ export default function Hero() {
                       </div>
                       <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#f3f4f6] border border-[#e5e7eb] rounded-full">
                         <svg className="w-3 h-3 text-[#6b7280]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"/></svg>
-                        <span className="font-mono text-[9px] text-[#6b7280]">tutienda.com/wp-json/stocksync/v1/sync</span>
+                        <span className="font-mono text-[9px] text-[#6b7280]">tutienda.com/wp-json/wevica/v1/sync</span>
                       </div>
                     </div>
                   </div>

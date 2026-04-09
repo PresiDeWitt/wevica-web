@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-const LS_STARTER  = process.env.NEXT_PUBLIC_LS_SE_STARTER  ?? "https://stocksyncpro.lemonsqueezy.com/checkout";
-const LS_PRO      = process.env.NEXT_PUBLIC_LS_SE_PRO      ?? "https://stocksyncpro.lemonsqueezy.com/checkout";
-const LS_BUSINESS = process.env.NEXT_PUBLIC_LS_SE_BUSINESS ?? "https://stocksyncpro.lemonsqueezy.com/checkout";
+const LS_STARTER  = process.env.NEXT_PUBLIC_LS_SE_STARTER  ?? "#";
+const LS_PRO      = process.env.NEXT_PUBLIC_LS_SE_PRO      ?? "#";
+const LS_BUSINESS = process.env.NEXT_PUBLIC_LS_SE_BUSINESS ?? "#";
 
 interface Plan {
   name: string;

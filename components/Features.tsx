@@ -1,6 +1,45 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string }) {
+  const [display, setDisplay] = useState(0);
+  const [started, setStarted] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          setStarted(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [started]);
+
+  useEffect(() => {
+    if (!started) return;
+    const duration = 1500;
+    const steps = 40;
+    const increment = value / steps;
+    let current = 0;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= value) {
+        setDisplay(value);
+        clearInterval(timer);
+      } else {
+        setDisplay(Math.floor(current));
+      }
+    }, duration / steps);
+    return () => clearInterval(timer);
+  }, [started, value]);
+
+  return <span ref={ref}>{display}{suffix}</span>;
+}
 
 interface Feature {
   icon: React.ReactNode;
@@ -154,17 +193,18 @@ export default function Features() {
         {/* Additional stats row */}
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 section-fade-in">
           {[
-            { value: "+20", label: "Tiendas activas" },
-            { value: "99.9%", label: "Uptime garantizado" },
-            { value: "<2 min", label: "Tiempo instalación" },
-            { value: "24/7", label: "Sincronización" },
-          ].map((stat) => (
+            { value: 20, suffix: "+", prefix: "+", label: "Tiendas activas", animated: true },
+            { value: 99.9, suffix: "%", label: "Uptime garantizado", animated: true },
+            { value: 2, suffix: " min", prefix: "<", label: "Tiempo instalación", animated: true },
+            { value: 24, suffix: "/7", label: "Sincronización", animated: false },
+          ].map((stat, index) => (
             <div
               key={stat.label}
               className="glass-card rounded-xl p-5 text-center"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="text-2xl font-black gradient-text mb-1">
-                {stat.value}
+                {stat.animated ? <AnimatedNumber value={stat.value} suffix={stat.suffix} /> : `${stat.prefix ?? ""}${stat.value}${stat.suffix}`}
               </div>
               <div className="text-xs text-[#475569]">{stat.label}</div>
             </div>

@@ -109,10 +109,10 @@ export async function POST(req: NextRequest) {
       });
 
       if (!res.ok) {
-        console.error("[subscribe] Resend API error:", res.status);
+        console.error("[subscribe] Error enviando email de notificación");
       }
     } catch (err) {
-      console.error("[subscribe] Error enviando notificación:", err);
+      console.error("[subscribe] Error de conexión con proveedor de email");
     }
   }
 

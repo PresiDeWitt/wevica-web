@@ -19,7 +19,7 @@ const steps = [
 const requirements = [
   { label: "WordPress", value: "5.8 o superior" },
   { label: "PHP", value: "7.4 o superior" },
-  { label: "WooCommerce", value: "5.0 o superior" },
+  { label: "WooCommerce", value: "6.0 o superior" },
 ];
 
 export default function DescargarPage() {

@@ -50,6 +50,7 @@ export default function HowItWorks() {
 
   return (
     <section
+      id="como-funciona"
       ref={sectionRef}
       className="py-24 px-4 sm:px-6 relative overflow-hidden"
       aria-labelledby="how-it-works-heading"

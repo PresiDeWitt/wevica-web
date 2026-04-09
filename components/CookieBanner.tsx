@@ -9,13 +9,26 @@ interface Props {
 }
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const CONSENT_COOKIE = "cookie_consent";
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
+
+function getCookie(name: string): string | null {
+  if (typeof document === "undefined") return null;
+  const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+  return match ? decodeURIComponent(match[2]) : null;
+}
+
+function setCookie(name: string, value: string, maxAge: number) {
+  if (typeof document === "undefined") return;
+  document.cookie = `${name}=${encodeURIComponent(value)}; path=/; max-age=${maxAge}; SameSite=Lax`;
+}
 
 export default function CookieBanner({ nonce }: Props) {
   const [consent, setConsent] = useState<"accepted" | "rejected" | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem("cookie_consent");
+    const stored = getCookie(CONSENT_COOKIE);
     if (stored === "accepted") {
       setConsent("accepted");
     } else if (stored === "rejected") {
@@ -26,13 +39,13 @@ export default function CookieBanner({ nonce }: Props) {
   }, []);
 
   const accept = () => {
-    localStorage.setItem("cookie_consent", "accepted");
+    setCookie(CONSENT_COOKIE, "accepted", COOKIE_MAX_AGE);
     setConsent("accepted");
     setVisible(false);
   };
 
   const reject = () => {
-    localStorage.setItem("cookie_consent", "rejected");
+    setCookie(CONSENT_COOKIE, "rejected", COOKIE_MAX_AGE);
     setConsent("rejected");
     setVisible(false);
   };
