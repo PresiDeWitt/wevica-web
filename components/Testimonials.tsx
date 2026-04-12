@@ -27,9 +27,9 @@ const testimonials = [
     description: "Tienda de alimentos y productos gourmet · España",
     gradient: "from-[#ec4899]/10 to-[#f43f5e]/10",
     stats: [
-      { label: "+88% rotación", color: "text-[#10b981]", desc: "Precios y ofertas sincronizados en tiempo real con proveedores" },
+      { label: "+3.269 SKUs",   color: "text-[#10b981]", desc: "Productos con stock actualizado automáticamente cada día" },
       { label: "−pérdidas",     color: "text-[#ec4899]", desc: "Adiós a ventas de productos descontinuados" },
-      { label: "8h/semana",     color: "text-[#f43f5e]", desc: "Tiempo que ahorraban manualmente actualizando catálogo" },
+      { label: "8h/semana",     color: "text-[#f43f5e]", desc: "Tiempo que ahorraban actualizando el catálogo a mano" },
     ],
     quote: "Gestionábamos el inventario de forma manual, lo que nos llevaba horas cada semana y generaba errores constantes. Con Stock Sync Pro tenemos precios y stock sincronizados automáticamente. Esto nos ha permitido aumentar significativamente nuestra rotación y reducir pérdidas por productos descontinuados. La mejor inversión en automatización que hemos hecho.",
     quoteColor: "#ec4899",

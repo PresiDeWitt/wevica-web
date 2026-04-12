@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "¿Cada cuánto se actualiza el stock?",
-    a: "Con el plan Starter, la sincronización automática se ejecuta cada 2 horas. Con Pro, cada hora. Con Business, cada 30 minutos. En todos los casos el Sync Engine gestiona el proceso automáticamente sin que tengas que hacer nada.",
+    a: "Con el plan Starter el stock se actualiza 1 vez al día. Con Pro, 4 veces al día (cada 6 horas). Con Business, cada 2 horas (12 veces al día). En todos los casos el Sync Engine gestiona el proceso automáticamente sin que tengas que hacer nada.",
   },
   {
     q: "¿Qué pasa si mi proveedor cambia el diseño de su web?",

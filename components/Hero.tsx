@@ -88,7 +88,7 @@ export default function Hero() {
                       <div className="text-[11px] text-[#6b7280] mt-0.5">Stock synchronization dashboard</div>
                     </div>
                     <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#eef2ff] text-[#4338ca] border border-[#c7d2fe]">
-                      v4.9.2
+                      v5.1.2
                     </span>
                   </div>
                   <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-[11px] text-[#374151] font-medium shadow-sm">
@@ -100,10 +100,10 @@ export default function Hero() {
                 {/* Stat cards — 4 columnas con accent bar izquierda */}
                 <div className="grid grid-cols-4 gap-3 mb-4">
                   {[
-                    { label: "SYNCS", value: "1.284", meta: "Total accumulated", accent: "bg-[#6366f1]", icon: "text-[#6366f1]", iconBg: "bg-[#eef2ff]" },
-                    { label: "UPDATED", value: "847",  meta: "Products total",    accent: "bg-[#10b981]", icon: "text-[#10b981]", iconBg: "bg-[#d1fae5]" },
+                    { label: "SYNCS", value: "2.847", meta: "Total accumulated", accent: "bg-[#6366f1]", icon: "text-[#6366f1]", iconBg: "bg-[#eef2ff]" },
+                    { label: "UPDATED", value: "1.654",  meta: "Products total",    accent: "bg-[#10b981]", icon: "text-[#10b981]", iconBg: "bg-[#d1fae5]" },
                     { label: "ERRORS",  value: "0",    meta: "No errors",         accent: "bg-[#10b981]", icon: "text-[#10b981]", iconBg: "bg-[#d1fae5]" },
-                    { label: "STORES",  value: "2",    meta: "Tienda A, Tienda B", accent: "bg-[#f59e0b]", icon: "text-[#f59e0b]", iconBg: "bg-[#fef3c7]" },
+                    { label: "STORES",  value: "3",    meta: "Casa Picota, X3 Pádel · +1", accent: "bg-[#f59e0b]", icon: "text-[#f59e0b]", iconBg: "bg-[#fef3c7]" },
                   ].map((card) => (
                     <div key={card.label} className="relative bg-white rounded-xl border border-[#e5e7eb] p-3 shadow-sm overflow-hidden">
                       {/* Accent bar izquierda */}
@@ -135,8 +135,8 @@ export default function Hero() {
                     <div className="grid grid-cols-2 divide-x divide-[#f3f4f6]">
                       {[
                         { label: "DATE",    value: "Hace 5 min" },
-                        { label: "STORE",   value: "Tienda A" },
-                        { label: "UPDATED", value: <span className="text-[#065f46]">423 / 450</span> },
+                        { label: "STORE",   value: "Casa Picota" },
+                        { label: "UPDATED", value: <span className="text-[#065f46]">3.269 / 3.318</span> },
                         { label: "ERRORS",  value: <span className="text-[#065f46]">0</span> },
                       ].map((item, i) => (
                         <div key={i} className={`px-3 py-2 ${i >= 2 ? "border-t border-[#f3f4f6]" : ""}`}>
@@ -165,7 +165,7 @@ export default function Hero() {
                       </div>
                       <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#f3f4f6] border border-[#e5e7eb] rounded-full">
                         <svg className="w-3 h-3 text-[#6b7280]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"/></svg>
-                        <span className="font-mono text-[9px] text-[#6b7280]">tutienda.com/wp-json/wevica/v1/sync</span>
+                        <span className="font-mono text-[9px] text-[#6b7280]">tutienda.com/wp-json/stocksync/v1/sync</span>
                       </div>
                     </div>
                   </div>

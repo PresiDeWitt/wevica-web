@@ -26,7 +26,7 @@ const plans: Plan[] = [
       "Plugin WordPress incluido",
       "Hasta 500 SKUs gestionados",
       "1 API key",
-      "Sync manual vía REST API",
+      "Sync manual vía REST API (tú controlas)",
       "7 días de prueba completa",
     ],
     ctaLabel: "Empezar gratis",
@@ -39,7 +39,7 @@ const plans: Plan[] = [
     features: [
       "Plugin WordPress incluido",
       "1 proveedor gestionado",
-      "Sync automático gestionado",
+      "Sync automático 1× al día",
       "Scraping gestionado en VPS",
       "Hasta 3.000 SKUs gestionados",
       "Soporte por email",
@@ -56,7 +56,7 @@ const plans: Plan[] = [
     features: [
       "Plugin WordPress incluido",
       "Hasta 4 proveedores gestionados",
-      "Sync automático prioritario",
+      "Sync automático 4× al día (cada 6h)",
       "Scrapers personalizados incluidos",
       "Hasta 15.000 SKUs gestionados",
       "Dashboard + alertas avanzadas",
@@ -72,7 +72,7 @@ const plans: Plan[] = [
     features: [
       "Plugin WordPress incluido",
       "Proveedores ilimitados",
-      "Sync continuo en VPS dedicado",
+      "Sync cada 2h (12× al día)",
       "VPS dedicado exclusivo",
       "SKUs ilimitados",
       "SLA 99,9% garantizado",

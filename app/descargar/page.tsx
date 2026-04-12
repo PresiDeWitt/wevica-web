@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Descarga gratis el plugin WordPress Stock Sync Pro. Sincroniza stock desde cualquier fuente externa vía REST API.",
 };
 
-const VERSION = "4.9.2";
+const VERSION = "5.1.2";
 
 const steps = [
   "Ve a tu WordPress Admin → Plugins → Añadir nuevo plugin",
