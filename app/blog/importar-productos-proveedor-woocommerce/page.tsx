@@ -34,18 +34,18 @@ export default function BlogPost() {
       <article className="min-h-screen pt-20 pb-24 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
           <div className="pt-12 mb-10">
-            <Link href="/blog" className="text-sm text-[#64748b] hover:text-[#f1f5f9] transition-colors inline-flex items-center gap-1 mb-6">
+            <Link href="/blog" className="text-sm text-[#94a3b8] hover:text-[#f1f5f9] transition-colors inline-flex items-center gap-1 mb-6">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M10 7H2M6 3L2 7l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
               Volver al blog
             </Link>
             <div className="flex items-center gap-3 mb-5">
               <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[rgba(99,102,241,0.12)] border border-[rgba(99,102,241,0.2)] text-[#a5b4fc]">Tutorial</span>
-              <span className="text-xs text-[#475569]">22 de marzo de 2026 · 5 min lectura</span>
+              <span className="text-xs text-[#94a3b8]">22 de marzo de 2026 · 5 min lectura</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-[#f1f5f9] leading-tight mb-4">
               Cómo importar productos de tu proveedor a WooCommerce automáticamente
             </h1>
-            <p className="text-[#64748b] text-lg leading-relaxed">
+            <p className="text-[#cbd5e1] text-lg leading-relaxed">
               Importar el catálogo de un proveedor a WooCommerce manualmente es una tarea que puede llevar horas. Y lo peor es que hay que repetirla cada vez que el proveedor actualiza precios o stock. Aquí cómo hacerlo de forma automática.
             </p>
           </div>
@@ -93,7 +93,7 @@ export default function BlogPost() {
                     </div>
                     <div className="pb-4">
                       <p className="text-sm font-semibold text-[#f1f5f9]">{item.step}</p>
-                      <p className="text-xs text-[#64748b]">{item.desc}</p>
+                      <p className="text-xs text-[#cbd5e1]">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -105,7 +105,7 @@ export default function BlogPost() {
 
             <div className="glass-card rounded-2xl p-8 mt-10 text-center">
               <p className="text-[#f1f5f9] font-bold text-lg mb-2">Automatiza la importación de tu catálogo</p>
-              <p className="text-[#64748b] text-sm mb-6">Compatible con cualquier formato de proveedor. 7 días gratis.</p>
+              <p className="text-[#cbd5e1] text-sm mb-6">Compatible con cualquier formato de proveedor. 7 días gratis.</p>
               <Link href="/pricing" className="lemonsqueezy-button btn-primary px-7 py-3 text-sm inline-flex items-center gap-2 glow-primary">
                 <span>Instalar Stock Sync Pro</span>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>

@@ -9,28 +9,37 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#06060e",
-        "surface-card": "rgba(255,255,255,0.03)",
-        "border-card": "rgba(255,255,255,0.08)",
-        primary: "#6366f1",
-        "primary-hover": "#4f46e5",
-        violet: "#8b5cf6",
+        bg: "#0d0e12",
+        "surface-card": "rgba(255,255,255,0.02)",
+        "border-card": "rgba(255,255,255,0.11)",
+        primary: "#f5f5f0",
+        "primary-hover": "#e5e5dc",
+        violet: "#d97706", // warm amber for accent
+        brand: {
+          cream: "#f5f5f0",
+          sand: "#e5e5dc",
+          gold: "#d97706",
+          emerald: "#10b981",
+          obsidian: "#0d0e12",
+          darkcard: "#171922",
+        },
         "text-primary": "#f1f5f9",
-        "text-secondary": "#64748b",
+        "text-secondary": "#94a3b8",
         "text-muted": "#475569",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["var(--font-sans)", "sans-serif"],
+        serif: ["var(--font-serif)", "serif"],
       },
       backgroundImage: {
-        "gradient-primary": "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)",
+        "gradient-primary": "linear-gradient(135deg, #f5f5f0 0%, #e5e5dc 100%)",
         "gradient-radial-glow":
-          "radial-gradient(ellipse at center, rgba(99,102,241,0.15) 0%, transparent 70%)",
+          "radial-gradient(ellipse at center, rgba(245,245,240,0.05) 0%, transparent 70%)",
       },
       animation: {
-        "fade-in": "fadeIn 0.6s ease-out forwards",
-        "fade-up": "fadeUp 0.6s ease-out forwards",
-        "glow-pulse": "glowPulse 3s ease-in-out infinite",
+        "fade-in": "fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "fade-up": "fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "glow-pulse": "glowPulse 4s cubic-bezier(0.4, 0, 0.2, 1) infinite",
       },
       keyframes: {
         fadeIn: {
@@ -38,12 +47,12 @@ const config: Config = {
           "100%": { opacity: "1" },
         },
         fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         glowPulse: {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(99,102,241,0.3)" },
-          "50%": { boxShadow: "0 0 40px rgba(99,102,241,0.6)" },
+          "0%, 100%": { boxShadow: "0 0 15px rgba(245,245,240,0.05)" },
+          "50%": { boxShadow: "0 0 25px rgba(245,245,240,0.12)" },
         },
       },
     },

@@ -60,10 +60,10 @@ export default function Integrations() {
       name: "REST API",
       logo: (
         <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" aria-hidden="true">
-          <rect width="48" height="48" rx="10" fill="#0f172a" stroke="rgba(99,102,241,0.4)" strokeWidth="1.5" />
-          <path d="M8 24h7m17 0h8M20 24a4 4 0 008 0m-8 0a4 4 0 018 0" stroke="#6366f1" strokeWidth="2" strokeLinecap="round" />
-          <path d="M15 16l-4 8 4 8" stroke="#8b5cf6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M33 16l4 8-4 8" stroke="#8b5cf6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <rect width="48" height="48" rx="10" fill="#0f172a" stroke="rgba(255,255,255,0.06)" strokeWidth="1.5" />
+          <path d="M8 24h7m17 0h8M20 24a4 4 0 008 0m-8 0a4 4 0 018 0" stroke="#f5f5f0" strokeWidth="2" strokeLinecap="round" opacity="0.7" />
+          <path d="M15 16l-4 8 4 8" stroke="#a1a1aa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M33 16l4 8-4 8" stroke="#a1a1aa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
       label: "REST API",
@@ -73,13 +73,13 @@ export default function Integrations() {
       name: "Scraping",
       logo: (
         <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" aria-hidden="true">
-          <rect width="48" height="48" rx="10" fill="#0f172a" stroke="rgba(99,102,241,0.4)" strokeWidth="1.5" />
-          <path d="M12 14h24v4H12z" fill="#6366f1" opacity="0.3" rx="2" />
-          <path d="M12 22h18" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" />
-          <path d="M12 28h14" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" />
-          <path d="M12 34h10" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" />
-          <circle cx="38" cy="30" r="6" fill="#6366f1" opacity="0.2" stroke="#6366f1" strokeWidth="1.5" />
-          <path d="M35.5 30l1.5 1.5 3-3" stroke="#6366f1" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <rect width="48" height="48" rx="10" fill="#0f172a" stroke="rgba(255,255,255,0.06)" strokeWidth="1.5" />
+          <path d="M12 14h24v4H12z" fill="#f5f5f0" opacity="0.1" rx="2" />
+          <path d="M12 22h18" stroke="#a1a1aa" strokeWidth="2" strokeLinecap="round" />
+          <path d="M12 28h14" stroke="#a1a1aa" strokeWidth="2" strokeLinecap="round" />
+          <path d="M12 34h10" stroke="#a1a1aa" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="38" cy="30" r="6" fill="#f5f5f0" opacity="0.05" stroke="#f5f5f0" strokeWidth="1.5" />
+          <path d="M35.5 30l1.5 1.5 3-3" stroke="#f5f5f0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
       label: "Web Scraping",
@@ -89,10 +89,10 @@ export default function Integrations() {
       name: "CRON",
       logo: (
         <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" aria-hidden="true">
-          <rect width="48" height="48" rx="10" fill="#0f172a" stroke="rgba(99,102,241,0.4)" strokeWidth="1.5" />
-          <circle cx="24" cy="24" r="13" stroke="#6366f1" strokeWidth="2" opacity="0.4" />
-          <circle cx="24" cy="24" r="9" stroke="#8b5cf6" strokeWidth="1.5" opacity="0.6" />
-          <path d="M24 17v7l4 4" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <rect width="48" height="48" rx="10" fill="#0f172a" stroke="rgba(255,255,255,0.06)" strokeWidth="1.5" />
+          <circle cx="24" cy="24" r="13" stroke="#71717a" strokeWidth="2" opacity="0.4" />
+          <circle cx="24" cy="24" r="9" stroke="#a1a1aa" strokeWidth="1.5" opacity="0.6" />
+          <path d="M24 17v7l4 4" stroke="#f5f5f0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
       label: "Cron / Webhooks",
@@ -102,13 +102,13 @@ export default function Integrations() {
 
   return (
     <section
-      className="py-14 px-4 sm:px-6 border-y border-white/[0.05]"
+      className="py-14 px-4 sm:px-6 border-y border-white/[0.08]"
       aria-labelledby="integrations-heading"
     >
       <div className="max-w-5xl mx-auto">
         <p
           id="integrations-heading"
-          className="text-center text-xs font-semibold text-[#475569] uppercase tracking-widest mb-8"
+          className="text-center text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-8 font-mono"
         >
           Compatible con las herramientas que ya usas
         </p>
@@ -116,17 +116,17 @@ export default function Integrations() {
           {integrations.map((item) => (
             <div
               key={item.name}
-              className="flex flex-col items-center gap-2 group"
+              className="flex flex-col items-center gap-2 group.has-hover"
               aria-label={`${item.label} — ${item.sublabel}`}
             >
-              <div className="w-14 h-14 rounded-2xl bg-white/[0.04] border border-white/[0.07] flex items-center justify-center group-hover:bg-white/[0.07] group-hover:border-white/[0.12] transition-all duration-200">
+              <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center group-hover:bg-white/[0.06] group-hover:border-white/[0.16] transition-all duration-300">
                 {item.logo}
               </div>
               <div className="text-center">
-                <div className="text-xs font-semibold text-[#94a3b8] leading-tight">
+                <div className="text-xs font-semibold text-zinc-300 leading-tight">
                   {item.label}
                 </div>
-                <div className="text-[10px] text-[#475569] leading-tight mt-0.5">
+                <div className="text-[10px] text-zinc-400 leading-tight mt-0.5 font-light">
                   {item.sublabel}
                 </div>
               </div>
@@ -137,3 +137,4 @@ export default function Integrations() {
     </section>
   );
 }
+

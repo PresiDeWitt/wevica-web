@@ -45,7 +45,7 @@ export default function DescargarPage() {
             <span className="gradient-text">Stock Sync Pro</span>
           </h1>
 
-          <p className="text-[#64748b] text-lg max-w-xl mx-auto mb-10">
+          <p className="text-[#cbd5e1] text-lg max-w-xl mx-auto mb-10">
             Plugin WordPress gratuito para sincronizar stock desde cualquier fuente externa vía REST API.
           </p>
 
@@ -60,7 +60,7 @@ export default function DescargarPage() {
             Descargar v{VERSION} (.zip)
           </a>
 
-          <p className="mt-3 text-xs text-[#475569]">115 KB · GPL-2.0 · Sin cuenta necesaria</p>
+          <p className="mt-3 text-xs text-[#94a3b8]">115 KB · GPL-2.0 · Sin cuenta necesaria</p>
         </div>
 
         {/* Install steps */}
@@ -85,7 +85,7 @@ export default function DescargarPage() {
             <ul className="flex flex-col gap-2">
               {requirements.map((r) => (
                 <li key={r.label} className="flex justify-between text-sm">
-                  <span className="text-[#64748b]">{r.label}</span>
+                  <span className="text-[#cbd5e1]">{r.label}</span>
                   <span className="text-[#94a3b8] font-medium">{r.value}</span>
                 </li>
               ))}
@@ -95,7 +95,7 @@ export default function DescargarPage() {
 
         {/* Upgrade CTA */}
         <div className="relative z-10 max-w-2xl mx-auto mt-8 text-center">
-          <p className="text-sm text-[#475569]">
+          <p className="text-sm text-[#94a3b8]">
             ¿Quieres que lo gestionemos todo por ti?{" "}
             <a href="/pricing" className="text-indigo-400 hover:text-indigo-300 font-medium transition-colors">
               Ver planes con Sync Engine incluido →

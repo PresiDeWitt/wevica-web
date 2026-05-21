@@ -48,7 +48,7 @@ export default function DocsSidebar() {
       className="hidden lg:block w-52 shrink-0 sticky top-24 self-start"
       aria-label="Tabla de contenidos"
     >
-      <p className="text-[10px] font-bold text-[#475569] uppercase tracking-widest mb-3">
+      <p className="text-[10px] font-bold text-[#94a3b8] uppercase tracking-widest mb-3">
         En esta página
       </p>
       <ul className="flex flex-col gap-1">
@@ -56,10 +56,9 @@ export default function DocsSidebar() {
           <li key={s.id}>
             <a
               href={`#${s.id}`}
-              className="text-sm py-1 block transition-colors duration-300"
-              style={{
-                color: activeId === s.id ? "#f1f5f9" : "#64748b",
-              }}
+              className={`text-sm py-1 block transition-colors duration-300 ${
+                activeId === s.id ? "text-[#f1f5f9] font-medium" : "text-[#94a3b8] hover:text-[#f1f5f9]"
+              }`}
             >
               {s.label}
             </a>
@@ -67,7 +66,7 @@ export default function DocsSidebar() {
         ))}
       </ul>
       <div className="mt-8 glass-card rounded-xl p-4">
-        <p className="text-xs text-[#64748b] mb-3">¿Necesitas ayuda?</p>
+        <p className="text-xs text-[#cbd5e1] mb-3">¿Necesitas ayuda?</p>
         <a
           href="mailto:hola@wevica.com"
           className="text-xs text-[#6366f1] hover:text-[#8b5cf6] transition-colors font-medium"

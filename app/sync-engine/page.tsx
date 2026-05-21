@@ -85,7 +85,7 @@ export default function SyncEnginePage() {
             Tu stock sincronizado.{" "}
             <span className="gradient-text">Sin servidores.</span>
           </h1>
-          <p className="text-[#64748b] text-lg max-w-2xl mx-auto mb-10">
+          <p className="text-zinc-300 text-lg max-w-2xl mx-auto mb-10">
             Nos encargamos de scrapear tu proveedor y actualizar tu tienda WooCommerce en piloto automático.
             Tú solo instalas el plugin y nos dices cuál es tu proveedor.
           </p>
@@ -118,7 +118,7 @@ export default function SyncEnginePage() {
             ].map((b) => (
               <div
                 key={b.text}
-                className="flex items-center gap-2 text-xs text-[#475569] bg-white/[0.03] border border-white/[0.07] rounded-full px-3 py-1.5"
+                className="flex items-center gap-2 text-xs text-[#cbd5e1] bg-white/[0.03] border border-white/[0.07] rounded-full px-3 py-1.5"
               >
                 <span aria-hidden="true">{b.icon}</span>
                 {b.text}
@@ -139,7 +139,7 @@ export default function SyncEnginePage() {
               Tres pasos y{" "}
               <span className="gradient-text">listo para siempre.</span>
             </h2>
-            <p className="text-[#64748b] text-base max-w-lg mx-auto">
+            <p className="text-zinc-300 text-base max-w-lg mx-auto">
               No necesitas saber programar ni mantener servidores. Solo sigue estos pasos.
             </p>
           </div>
@@ -151,7 +151,7 @@ export default function SyncEnginePage() {
                   {step.number}
                 </div>
                 <h3 className="text-base font-bold text-[#f1f5f9] mb-2">{step.title}</h3>
-                <p className="text-sm text-[#64748b] leading-relaxed">{step.description}</p>
+                <p className="text-sm text-[#cbd5e1] leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -170,15 +170,15 @@ export default function SyncEnginePage() {
               </svg>
             </div>
             <div>
-              <p className="text-sm font-semibold text-[#f1f5f9] mb-1">
-                ¿Qué pasa después de contratar?
-              </p>
-              <p className="text-sm text-[#64748b] leading-relaxed">
-                Recibirás tu clave de Sync Engine por email. La introduces en el plugin, nos indicas la URL de tu proveedor
-                y en{" "}
-                <strong className="text-[#94a3b8]">24-48 horas</strong> tu scraper personalizado está activo y sincronizando.
-                Sin reuniones, sin configuración técnica por tu parte.
-              </p>
+                <p className="text-sm font-semibold text-[#f1f5f9] mb-1">
+                  ¿Qué pasa después de contratar?
+                </p>
+                <p className="text-sm text-[#cbd5e1] leading-relaxed">
+                  Recibirás tu clave de Sync Engine por email. La introduces en el plugin, nos indicas la URL de tu proveedor
+                  y en{" "}
+                  <strong className="text-zinc-100">24-48 horas</strong> tu scraper personalizado está activo y sincronizando.
+                  Sin reuniones, sin configuración técnica por tu parte.
+                </p>
             </div>
           </div>
         </div>
@@ -209,7 +209,7 @@ function SyncEngineFAQ() {
           >
             Preguntas <span className="gradient-text">frecuentes.</span>
           </h2>
-          <p className="text-[#64748b] text-base">
+          <p className="text-zinc-300 text-base">
             ¿Tienes más dudas?{" "}
             <a href="mailto:hola@wevica.com" className="text-[#6366f1] hover:text-[#8b5cf6] transition-colors">
               Escríbenos
@@ -226,12 +226,12 @@ function SyncEngineFAQ() {
                 </span>
                 <span className="shrink-0 w-6 h-6 rounded-full bg-white/[0.05] flex items-center justify-center group-open:bg-[rgba(99,102,241,0.2)] group-open:rotate-180 transition-all duration-300" aria-hidden="true">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 4l4 4 4-4" stroke="#64748b" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M2 4l4 4 4-4" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
               </summary>
               <div className="px-6 pb-6">
-                <p className="text-sm text-[#64748b] leading-relaxed">{faq.answer}</p>
+                <p className="text-sm text-[#cbd5e1] leading-relaxed">{faq.answer}</p>
               </div>
             </details>
           ))}

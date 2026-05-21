@@ -169,7 +169,7 @@ export default function ChangelogPage() {
             <h1 className="text-4xl font-black tracking-tight mb-3">
               Historial de <span className="gradient-text">versiones</span>
             </h1>
-            <p className="text-[#64748b] text-lg">
+            <p className="text-[#cbd5e1] text-lg">
               Todas las actualizaciones de Stock Sync Pro. Nuevas funcionalidades, mejoras y correcciones.
             </p>
           </div>
@@ -184,7 +184,7 @@ export default function ChangelogPage() {
                     <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${tc.className}`}>
                       {tc.label}
                     </span>
-                    <span className="text-xs text-[#475569] ml-auto">{release.date}</span>
+                    <span className="text-xs text-[#94a3b8] ml-auto">{release.date}</span>
                   </div>
 
                   <ul className="flex flex-col gap-3">
@@ -194,7 +194,7 @@ export default function ChangelogPage() {
                         <li key={i} className="flex items-start gap-3 text-sm text-[#94a3b8]">
                           <div className="flex items-center gap-1.5 shrink-0 mt-0.5">
                             <div className={`w-1.5 h-1.5 rounded-full ${cc.dot}`} aria-hidden="true" />
-                            <span className="text-xs font-semibold text-[#475569] w-12">{cc.label}</span>
+                            <span className="text-xs font-semibold text-[#cbd5e1] w-12">{cc.label}</span>
                           </div>
                           {change.text}
                         </li>

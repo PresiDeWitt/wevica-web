@@ -25,7 +25,7 @@ export default function DocsPage() {
             <h1 className="text-4xl font-black tracking-tight mb-3" style={{ animation: "heroFadeInUp 0.7s ease 0.15s both" }}>
               <span className="gradient-text">Stock Sync Pro</span> — Docs
             </h1>
-            <p className="text-[#64748b] text-lg" style={{ animation: "heroFadeInUp 0.7s ease 0.25s both" }}>
+            <p className="text-[#cbd5e1] text-lg" style={{ animation: "heroFadeInUp 0.7s ease 0.25s both" }}>
               Todo lo que necesitas para instalar, configurar e integrar el plugin en tu tienda WooCommerce.
             </p>
           </div>
@@ -195,7 +195,7 @@ REF-003,8,12.00`}
                         {ep.method}
                       </span>
                       <code className="text-sm text-[#a5b4fc] break-all">{ep.path}</code>
-                      <span className="text-sm text-[#64748b]">{ep.desc}</span>
+                      <span className="text-sm text-[#cbd5e1]">{ep.desc}</span>
                     </div>
                   ))}
                 </div>
@@ -268,7 +268,7 @@ REF-003,8,12.00`}
                 ].map(({ q, a }) => (
                   <div key={q} className="border-b border-white/[0.06] py-5 last:border-0">
                     <h3 className="text-sm font-bold text-[#f1f5f9] mb-2">{q}</h3>
-                    <p className="text-sm text-[#64748b] mb-0">{a}</p>
+                    <p className="text-sm text-[#cbd5e1] mb-0">{a}</p>
                   </div>
                 ))}
 

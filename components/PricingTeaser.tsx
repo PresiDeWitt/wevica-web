@@ -8,7 +8,7 @@ const plans = [
     category: "Plan Free",
     name: "Gratis para siempre",
     price: "0",
-    period: "",
+    period: "siempre",
     description: "Plugin WordPress incluido. Conecta tu propio CSV, API o ERP. Tú gestionas el sync.",
     features: [
       "Plugin WordPress incluido",
@@ -65,34 +65,34 @@ export default function PricingTeaser() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 px-4 sm:px-6 relative"
+      className="py-24 px-4 sm:px-6 relative border-t border-white/[0.08]"
       aria-labelledby="pricing-teaser-heading"
     >
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-14 section-fade-in">
+        <div className="text-center mb-16 section-fade-in">
           <div className="badge mb-4 inline-flex">
             <span className="badge-dot" aria-hidden="true" />
-            Precios
+            Precios simples
           </div>
           <h2
             id="pricing-teaser-heading"
-            className="text-4xl sm:text-5xl font-black tracking-tight mb-4"
+            className="text-4xl sm:text-5xl font-bold tracking-tight text-[#f5f5f0] mb-4"
           >
             Olvídate de actualizar el stock.{" "}
-            <span className="gradient-text">Lo hacemos nosotros.</span>
+            <span className="font-serif italic font-normal text-zinc-300">Lo hacemos nosotros.</span>
           </h2>
-          <p className="text-[#64748b] text-lg max-w-xl mx-auto">
+          <p className="text-zinc-300 text-base max-w-xl mx-auto font-light">
             Plugin + Sync Engine incluidos en cada plan. Empieza gratis, escala cuando lo necesites.
           </p>
         </div>
 
         {/* Plans grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {plans.map((plan, index) => (
             <article
               key={plan.name}
-              className={`section-fade-in rounded-2xl p-8 flex flex-col gap-6 transition-all duration-300 ${
+              className={`section-fade-in rounded-2xl p-8 flex flex-col gap-6 transition-all duration-300 noise-overlay ${
                 plan.highlighted
                   ? "plan-card-popular plan-card-popular:hover"
                   : "glass-card glass-card-hover"
@@ -101,7 +101,9 @@ export default function PricingTeaser() {
             >
               {/* Category label */}
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-[#6366f1] uppercase tracking-widest">
+                <span className={`text-xs font-semibold uppercase tracking-widest ${
+                  plan.highlighted ? "text-amber-500/90" : "text-zinc-400"
+                }`}>
                   {plan.category}
                 </span>
                 {plan.highlighted && (
@@ -111,37 +113,38 @@ export default function PricingTeaser() {
 
               {/* Price */}
               <div>
-                <div className="flex items-end gap-1.5 mb-1">
-                  <span className="text-4xl font-black text-[#f1f5f9]">
+                <div className="flex items-end gap-1.5 mb-2">
+                  <span className="text-4xl font-extrabold text-[#f5f5f0]">
                     €{plan.price}
                   </span>
-                  <span className="text-[#64748b] mb-1.5">/{plan.period}</span>
+                  <span className="text-zinc-400 mb-1.5">/{plan.period}</span>
                 </div>
-                <p className="text-sm text-[#64748b]">{plan.description}</p>
+                <p className="text-sm text-zinc-300 leading-relaxed font-light">{plan.description}</p>
               </div>
 
+              <div className="h-px bg-white/[0.08] w-full" aria-hidden="true" />
+
               {/* Features */}
-              <ul className="flex flex-col gap-2.5 flex-1">
+              <ul className="flex flex-col gap-3 flex-1">
                 {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2.5 text-sm text-[#94a3b8]">
+                  <li key={feature} className="flex items-center gap-3 text-sm text-zinc-300">
                     <svg
-                      width="16"
-                      height="16"
+                      width="14"
+                      height="14"
                       viewBox="0 0 16 16"
                       fill="none"
                       aria-hidden="true"
-                      className="shrink-0"
+                      className="shrink-0 text-emerald-500"
                     >
-                      <circle cx="8" cy="8" r="7" fill="rgba(99,102,241,0.15)" />
                       <path
-                        d="M5 8l2 2 4-4"
-                        stroke="#6366f1"
-                        strokeWidth="1.5"
+                        d="M3.5 8.5l3 3 6-6"
+                        stroke="currentColor"
+                        strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
                     </svg>
-                    {feature}
+                    <span className="font-light">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -149,7 +152,7 @@ export default function PricingTeaser() {
               {/* CTA */}
               <Link
                 href={plan.ctaHref}
-                className={`lemonsqueezy-button text-center py-3 px-5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                className={`text-center py-3.5 px-5 text-sm font-semibold transition-all duration-300 ${
                   plan.highlighted
                     ? "btn-primary glow-primary"
                     : "btn-secondary"
@@ -166,11 +169,24 @@ export default function PricingTeaser() {
         <div className="text-center section-fade-in">
           <Link
             href="/pricing"
-            className="inline-flex items-center gap-2 text-[#6366f1] hover:text-[#8b5cf6] font-medium transition-colors text-sm"
+            className="inline-flex items-center gap-2 text-zinc-400 hover:text-[#f5f5f0] font-medium transition-colors text-sm group"
           >
             Ver todos los planes y comparar características
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+              className="transform transition-transform group-hover:translate-x-1 duration-300"
+            >
+              <path
+                d="M3 8h10M9 4l4 4-4 4"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </Link>
         </div>
@@ -178,3 +194,4 @@ export default function PricingTeaser() {
     </section>
   );
 }
+

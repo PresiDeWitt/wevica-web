@@ -44,7 +44,7 @@ export default function PricingPage() {
             Simple, directo,{" "}
             <span className="gradient-text">sin sorpresas.</span>
           </h1>
-          <p className="text-[#64748b] text-lg max-w-xl mx-auto" style={{ animation: "heroFadeInUp 0.7s ease 0.25s both" }}>
+          <p className="text-[#cbd5e1] text-lg max-w-xl mx-auto" style={{ animation: "heroFadeInUp 0.7s ease 0.25s both" }}>
             Elige el plan que encaja con el tamaño de tu tienda. Todos incluyen 7 días de prueba gratis y soporte en español.
           </p>
 
@@ -57,7 +57,7 @@ export default function PricingPage() {
             ].map((badge) => (
               <div
                 key={badge.text}
-                className="flex items-center gap-2 text-xs text-[#475569] bg-white/[0.03] border border-white/[0.07] rounded-full px-3 py-1.5"
+                className="flex items-center gap-2 text-xs text-[#cbd5e1] bg-white/[0.03] border border-white/[0.07] rounded-full px-3 py-1.5"
               >
                 <span aria-hidden="true">{badge.icon}</span>
                 {badge.text}

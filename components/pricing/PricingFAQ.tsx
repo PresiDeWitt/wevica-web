@@ -56,7 +56,7 @@ export default function PricingFAQ() {
           >
             Preguntas <span className="gradient-text">frecuentes.</span>
           </h2>
-          <p className="text-[#64748b] text-base">
+          <p className="text-zinc-300 text-base">
             Si no encuentras tu respuesta aquí, escríbenos a{" "}
             <a
               href="mailto:hola@wevica.com"
@@ -99,7 +99,7 @@ export default function PricingFAQ() {
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path
                       d="M2 4l4 4 4-4"
-                      stroke={openIndex === index ? "#6366f1" : "#64748b"}
+                      stroke={openIndex === index ? "#6366f1" : "#94a3b8"}
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -115,7 +115,7 @@ export default function PricingFAQ() {
                   aria-labelledby={`faq-question-${index}`}
                   className="px-6 pb-6"
                 >
-                  <p className="text-sm text-[#64748b] leading-relaxed">
+                  <p className="text-sm text-[#cbd5e1] leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

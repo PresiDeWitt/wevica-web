@@ -43,29 +43,29 @@ export default function LandingFAQ() {
   return (
     <section
       id="faq"
-      className="py-24 px-4 sm:px-6"
+      className="py-24 px-4 sm:px-6 relative border-t border-white/[0.02]"
       aria-labelledby="landing-faq-heading"
     >
       <div className="max-w-3xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-16">
           <div className="badge mb-4 inline-flex">
             <span className="badge-dot" aria-hidden="true" />
             Preguntas frecuentes
           </div>
           <h2
             id="landing-faq-heading"
-            className="text-3xl sm:text-4xl font-black tracking-tight mb-4"
+            className="text-3xl sm:text-4xl font-bold tracking-tight text-[#f5f5f0] mb-4"
           >
             Todo lo que necesitas{" "}
-            <span className="gradient-text">saber</span>
+            <span className="font-serif italic font-normal text-zinc-400">saber.</span>
           </h2>
-          <p className="text-[#64748b] text-base">
+          <p className="text-zinc-400 text-base font-light">
             ¿Tienes dudas? Aquí respondemos las más habituales. Si no encuentras
             lo que buscas,{" "}
             <a
               href="mailto:hola@wevica.com"
-              className="text-[#6366f1] hover:text-[#8b5cf6] transition-colors"
+              className="text-[#f5f5f0] underline underline-offset-4 hover:text-amber-500 transition-colors font-medium"
             >
               escríbenos
             </a>
@@ -74,39 +74,39 @@ export default function LandingFAQ() {
         </div>
 
         {/* Accordion */}
-        <div className="flex flex-col gap-2" role="list">
+        <div className="border-t border-white/[0.04] flex flex-col" role="list">
           {faqs.map((faq, i) => {
             const isOpen = open === i;
             return (
               <div
                 key={i}
-                className={`glass-card rounded-xl overflow-hidden transition-all duration-200 ${
-                  isOpen ? "ring-1 ring-[#6366f1]/30" : ""
-                }`}
+                className="faq-item transition-all duration-300"
                 role="listitem"
               >
                 <button
-                  className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
+                  className="w-full flex items-center justify-between gap-4 py-5 text-left group"
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-landing-${i}`}
                   id={`faq-question-landing-${i}`}
                 >
-                  <span className="text-sm font-semibold text-[#f1f5f9] leading-snug">
+                  <span className={`text-base font-medium transition-colors duration-300 ${
+                    isOpen ? "text-[#f5f5f0]" : "text-zinc-300 group-hover:text-[#f5f5f0]"
+                  }`}>
                     {faq.q}
                   </span>
                   <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 16 16"
                     fill="none"
                     aria-hidden="true"
-                    className={`shrink-0 text-[#6366f1] transition-transform duration-200 ${
-                      isOpen ? "rotate-180" : ""
+                    className={`shrink-0 text-zinc-400 transition-transform duration-300 group-hover:text-[#f5f5f0] ${
+                      isOpen ? "rotate-180 text-[#f5f5f0]" : ""
                     }`}
                   >
                     <path
-                      d="M4.5 6.75L9 11.25l4.5-4.5"
+                      d="M3 6l5 5 5-5"
                       stroke="currentColor"
                       strokeWidth="1.5"
                       strokeLinecap="round"
@@ -114,16 +114,20 @@ export default function LandingFAQ() {
                     />
                   </svg>
                 </button>
+                
                 <div
                   id={`faq-answer-landing-${i}`}
                   role="region"
                   aria-labelledby={`faq-question-landing-${i}`}
-                  hidden={!isOpen}
-                  className="px-5 pb-4"
+                  className={`grid transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    isOpen ? "grid-rows-[1fr] opacity-100 pb-5" : "grid-rows-[0fr] opacity-0 pointer-events-none"
+                  }`}
                 >
-                  <p className="text-sm text-[#64748b] leading-relaxed">
-                    {faq.a}
-                  </p>
+                  <div className="overflow-hidden">
+                    <p className="text-sm sm:text-[15px] text-zinc-400 leading-relaxed font-light max-w-2xl">
+                      {faq.a}
+                    </p>
+                  </div>
                 </div>
               </div>
             );
@@ -133,3 +137,4 @@ export default function LandingFAQ() {
     </section>
   );
 }
+

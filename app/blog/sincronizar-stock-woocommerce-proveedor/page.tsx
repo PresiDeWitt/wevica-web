@@ -39,7 +39,7 @@ export default function BlogPost() {
 
           {/* Header */}
           <div className="pt-12 mb-10">
-            <Link href="/blog" className="text-sm text-[#64748b] hover:text-[#f1f5f9] transition-colors inline-flex items-center gap-1 mb-6">
+            <Link href="/blog" className="text-sm text-[#94a3b8] hover:text-[#f1f5f9] transition-colors inline-flex items-center gap-1 mb-6">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M10 7H2M6 3L2 7l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -50,13 +50,13 @@ export default function BlogPost() {
               <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[rgba(99,102,241,0.12)] border border-[rgba(99,102,241,0.2)] text-[#a5b4fc]">
                 Tutorial
               </span>
-              <span className="text-xs text-[#475569]">21 de marzo de 2026 · 6 min lectura</span>
+              <span className="text-xs text-[#94a3b8]">21 de marzo de 2026 · 6 min lectura</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-[#f1f5f9] leading-tight mb-4">
               Cómo sincronizar el stock de WooCommerce con tu proveedor automáticamente
             </h1>
-            <p className="text-[#64748b] text-lg leading-relaxed">
+            <p className="text-[#cbd5e1] text-lg leading-relaxed">
               Si tienes una tienda WooCommerce y tu proveedor actualiza el stock de forma externa, sabes lo que es perder horas actualizando inventario a mano. Este artículo explica cómo automatizarlo.
             </p>
           </div>
@@ -163,7 +163,7 @@ export default function BlogPost() {
             {/* CTA */}
             <div className="glass-card rounded-2xl p-8 mt-10 text-center">
               <p className="text-[#f1f5f9] font-bold text-lg mb-2">Pruébalo 7 días gratis</p>
-              <p className="text-[#64748b] text-sm mb-6">Sin tarjeta de crédito. Si no funciona para tu proveedor, te devolvemos el dinero.</p>
+              <p className="text-[#cbd5e1] text-sm mb-6">Sin tarjeta de crédito. Si no funciona para tu proveedor, te devolvemos el dinero.</p>
               <Link
                 href="/pricing"
                 className="lemonsqueezy-button btn-primary px-7 py-3 text-sm inline-flex items-center gap-2 glow-primary"

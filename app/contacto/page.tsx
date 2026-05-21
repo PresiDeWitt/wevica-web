@@ -63,7 +63,7 @@ export default function ContactPage() {
             <h1 className="text-4xl font-black tracking-tight mb-3">
               Estamos para <span className="gradient-text">ayudarte</span>
             </h1>
-            <p className="text-[#64748b] text-lg max-w-xl">
+            <p className="text-[#cbd5e1] text-lg max-w-xl">
               Soporte en español. Tiempo de respuesta habitual: menos de 24 horas en días laborables.
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex-1">
                   <h2 className="text-sm font-bold text-[#f1f5f9] mb-1">{ch.title}</h2>
-                  <p className="text-xs text-[#64748b] leading-relaxed">{ch.description}</p>
+                  <p className="text-xs text-[#94a3b8] leading-relaxed">{ch.description}</p>
                 </div>
                 <Link
                   href={ch.href}
@@ -90,7 +90,7 @@ export default function ContactPage() {
 
           <div className="glass-card rounded-2xl p-8">
             <h2 className="text-lg font-bold text-[#f1f5f9] mb-2">Antes de escribirnos</h2>
-            <p className="text-[#64748b] text-sm mb-5">
+            <p className="text-[#cbd5e1] text-sm mb-5">
               Puede que ya tengas la respuesta aquí:
             </p>
             <div className="flex flex-col sm:flex-row gap-3">

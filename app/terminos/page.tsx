@@ -19,7 +19,7 @@ export default function TerminosPage() {
             Términos de{" "}
             <span className="gradient-text">Uso</span>
           </h1>
-          <p className="text-sm text-[#475569] mb-12">
+          <p className="text-sm text-[#94a3b8] mb-12">
             Última actualización: 20 de marzo de 2026
           </p>
 

@@ -12,7 +12,7 @@ export default function NotFound() {
           <h1 className="text-2xl font-bold text-[#f1f5f9] mb-3">
             Página no encontrada
           </h1>
-          <p className="text-[#64748b] mb-8 leading-relaxed">
+          <p className="text-[#cbd5e1] mb-8 leading-relaxed">
             La página que buscas no existe o ha sido movida. Prueba desde la página principal.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

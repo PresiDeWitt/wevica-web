@@ -103,9 +103,9 @@ export default function Plans() {
             Olvídate de actualizar el stock.{" "}
             <span className="gradient-text">Lo hacemos nosotros.</span>
           </h2>
-          <p className="text-[#64748b] text-base max-w-xl mx-auto">
+          <p className="text-zinc-300 text-base max-w-xl mx-auto">
             Todos los planes de pago incluyen el plugin WordPress y el Sync Engine gestionado.{" "}
-            <strong className="text-[#94a3b8] font-medium">Cero configuración de servidor.</strong>
+            <strong className="text-zinc-100 font-semibold">Cero configuración de servidor.</strong>
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export default function Plans() {
               {/* Plan name + description */}
               <div>
                 <h3 className="text-lg font-bold text-[#f1f5f9] mb-1">{plan.name}</h3>
-                <p className="text-sm text-[#64748b]">{plan.description}</p>
+                <p className="text-sm text-[#cbd5e1]">{plan.description}</p>
               </div>
 
               {/* Price */}
@@ -140,10 +140,10 @@ export default function Plans() {
                     {plan.free ? "Gratis" : `€${plan.price}`}
                   </span>
                   {!plan.free && (
-                    <span className="text-[#64748b] mb-1.5 text-sm">/mes</span>
+                    <span className="text-[#94a3b8] mb-1.5 text-sm">/mes</span>
                   )}
                 </div>
-                <p className="text-xs text-[#475569]">
+                <p className="text-xs text-[#a1a1aa]">
                   {plan.free ? "Sin tarjeta de crédito" : "Facturado mensualmente · Cancela cuando quieras"}
                 </p>
               </div>
@@ -151,7 +151,7 @@ export default function Plans() {
               {/* Features */}
               <ul className="flex flex-col gap-2.5 flex-1" aria-label={`Características del plan ${plan.name}`}>
                 {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2.5 text-sm text-[#94a3b8]">
+                  <li key={feature} className="flex items-start gap-2.5 text-sm text-[#cbd5e1]">
                     <svg
                       width="16"
                       height="16"
@@ -196,7 +196,7 @@ export default function Plans() {
             <p className="text-sm font-semibold text-[#f1f5f9] mb-1">
               ¿Tienes un proveedor con estructura especial?
             </p>
-            <p className="text-xs text-[#64748b]">
+            <p className="text-xs text-[#a1a1aa]">
               Desarrollamos scrapers a medida para cualquier web o sistema. Contacta con nosotros.
             </p>
           </div>

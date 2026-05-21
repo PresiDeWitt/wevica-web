@@ -89,7 +89,7 @@ export default function BlogPage() {
             <h1 className="text-4xl font-black tracking-tight mb-3" style={{ animation: "heroFadeInUp 0.7s ease 0.15s both" }}>
               Recursos para <span className="gradient-text">tiendas WooCommerce</span>
             </h1>
-            <p className="text-[#64748b] text-lg" style={{ animation: "heroFadeInUp 0.7s ease 0.25s both" }}>
+            <p className="text-[#cbd5e1] text-lg" style={{ animation: "heroFadeInUp 0.7s ease 0.25s both" }}>
               Guías, tutoriales y casos prácticos para automatizar tu inventario y vender más.
             </p>
           </div>
@@ -105,12 +105,12 @@ export default function BlogPage() {
                   <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[rgba(99,102,241,0.12)] border border-[rgba(99,102,241,0.2)] text-[#a5b4fc]">
                     {post.tag}
                   </span>
-                  <span className="text-xs text-[#475569]">{post.date} · {post.readTime} lectura</span>
+                  <span className="text-xs text-[#94a3b8]">{post.date} · {post.readTime} lectura</span>
                 </div>
                 <h2 className="text-xl font-bold text-[#f1f5f9] mb-2 group-hover:text-white transition-colors">
                   {post.title}
                 </h2>
-                <p className="text-[#64748b] text-sm leading-relaxed">{post.excerpt}</p>
+                <p className="text-[#cbd5e1] text-sm leading-relaxed">{post.excerpt}</p>
                 <span className="inline-flex items-center gap-1 text-[#6366f1] text-sm font-medium mt-4">
                   Leer artículo
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
