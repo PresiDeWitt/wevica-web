@@ -86,7 +86,7 @@ export default function ComparisonSection() {
               <p className="text-[10px] font-medium text-zinc-400 mt-2">{hours}h × €15/h × 52 semanas</p>
             </div>
 
-            <div className="bg-white/[0.01] border border-white/[0.06] rounded-2xl p-6 text-center">
+            <div className="bg-white/[0.01] border border-white/[0.11] rounded-2xl p-6 text-center">
               <p className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest mb-2.5">Coste del plugin / año</p>
               <p className="text-3.5xl font-mono font-bold text-[#f5f5f0]">€948</p>
               <p className="text-[10px] font-medium text-zinc-400 mt-2">€79/mes · plan todo incluido</p>

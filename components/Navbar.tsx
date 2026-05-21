@@ -22,7 +22,7 @@ export default function Navbar() {
       <nav
         className={`mx-auto flex items-center justify-between transition-all duration-500 ${
           scrolled
-            ? "max-w-4xl px-6 h-12 rounded-full border border-white/[0.04] bg-[#0c0c0e]/85 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
+            ? "max-w-4xl px-6 h-12 rounded-full border border-white/[0.11] bg-[#0c0c0e]/85 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
             : "max-w-6xl px-4 sm:px-6 h-16 border-b border-transparent bg-transparent"
         }`}
         aria-label="Navegación principal"
@@ -110,7 +110,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden mt-2 mx-4 bg-[#0c0c0e]/95 backdrop-blur-xl border border-white/[0.04] rounded-2xl p-4 flex flex-col gap-3 shadow-2xl">
+        <div className="md:hidden mt-2 mx-4 bg-[#0c0c0e]/95 backdrop-blur-xl border border-white/[0.11] rounded-2xl p-4 flex flex-col gap-3 shadow-2xl">
           {[
             { href: "/#caracteristicas", label: "Características" },
             { href: "/pricing", label: "Precios" },

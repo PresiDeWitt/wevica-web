@@ -45,11 +45,11 @@ const GAP_RATIO  = 0.04; // gap between card edges as % of container
 function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
   return (
     <div
-      className="glass-card rounded-3xl overflow-hidden h-full border border-white/[0.04] shadow-2xl"
+      className="glass-card rounded-3xl overflow-hidden h-full border border-white/[0.11] shadow-2xl"
     >
       <div className="grid grid-cols-1 lg:grid-cols-5 h-full">
         {/* Left: stats */}
-        <div className={`lg:col-span-2 bg-gradient-to-br ${t.gradient} border-b lg:border-b-0 lg:border-r border-white/[0.04] p-8 flex flex-col justify-between gap-6`}>
+        <div className={`lg:col-span-2 bg-gradient-to-br ${t.gradient} border-b lg:border-b-0 lg:border-r border-white/[0.08] p-8 flex flex-col justify-between gap-6`}>
           <div>
             <div className="flex items-center gap-2 mb-5">
               <div className="w-8 h-8 rounded-lg bg-white/[0.02] border border-white/[0.06] flex items-center justify-center shrink-0">

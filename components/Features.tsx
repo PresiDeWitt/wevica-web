@@ -163,7 +163,7 @@ export default function Features() {
               style={{ transitionDelay: `${index * 80}ms` }}
             >
               {/* Icon container */}
-              <div className="w-11 h-11 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center justify-center shadow-inner">
+              <div className="w-11 h-11 rounded-xl bg-white/[0.03] border border-white/[0.1] flex items-center justify-center shadow-inner">
                 {feature.icon}
               </div>
 

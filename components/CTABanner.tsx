@@ -32,7 +32,7 @@ export default function CTABanner() {
       aria-labelledby="cta-heading"
     >
       <div className="max-w-4xl mx-auto">
-        <div className="relative rounded-3xl overflow-hidden section-fade-in glass-card noise-overlay border border-white/[0.04] p-12 sm:p-20">
+        <div className="relative rounded-3xl overflow-hidden section-fade-in glass-card noise-overlay border border-white/[0.11] p-12 sm:p-20">
           {/* Subtle grid pattern overlay */}
           <div
             className="absolute inset-0 grid-bg opacity-[0.03]"
@@ -85,7 +85,7 @@ export default function CTABanner() {
             </div>
 
             {/* Trust indicators */}
-            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-6 section-fade-in border-t border-white/[0.04] pt-8 w-full">
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-6 section-fade-in border-t border-white/[0.08] pt-8 w-full">
               {[
                 "Sin tarjeta de crédito",
                 "Cancela en 1 clic",

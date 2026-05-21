@@ -71,7 +71,7 @@ export default function NewsletterSection() {
           </p>
         )}
 
-        <p className="text-zinc-600 text-xs mt-5 font-light tracking-wide">
+        <p className="text-zinc-400 text-xs mt-5 font-light tracking-wide">
           Sin spam · Cancela cuando quieras
         </p>
       </div>

@@ -72,7 +72,7 @@ export default function CookieBanner({ nonce }: Props) {
           aria-label="Aviso de cookies"
           aria-live="polite"
         >
-          <div className="max-w-2xl mx-auto glass-card noise-overlay rounded-2xl p-5 sm:p-6 border border-white/[0.04] shadow-2xl">
+          <div className="max-w-2xl mx-auto glass-card noise-overlay rounded-2xl p-5 sm:p-6 border border-white/[0.11] shadow-2xl">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <div className="flex-1">
                 <p className="text-sm font-semibold text-[#f5f5f0] mb-1">Usamos cookies</p>

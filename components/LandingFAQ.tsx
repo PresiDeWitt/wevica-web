@@ -74,7 +74,7 @@ export default function LandingFAQ() {
         </div>
 
         {/* Accordion */}
-        <div className="border-t border-white/[0.04] flex flex-col" role="list">
+        <div className="border-t border-white/[0.08] flex flex-col" role="list">
           {faqs.map((faq, i) => {
             const isOpen = open === i;
             return (
